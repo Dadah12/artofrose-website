@@ -1,0 +1,453 @@
+/*-------------------------------------
+  BLOG - ART OF ROSE
+--------------------------------------*/
+
+/* 1. FONT FACE - Custom Script for Subtitle */
+@font-face {
+  font-family: "Dancing Script OT";
+  src: url("../fonts/DancingScript-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 2. GLOBAL BLOG CARD TEXT (Body) */
+.blog-card,
+.blog-card p,
+.blog-card li,
+.blog-card ul,
+.blog-card ol,
+.blog-meta,
+.blog-ending,
+.blog-lead,
+.blog-photo-card,
+.blog-section-title,
+.sidebar-title,
+.sidebar-link-title,
+.sidebar-link-desc,
+.blog-cta-box {
+  font-family: "Lora", serif !important;
+  font-size: 1.05rem;
+  color: #eaeaea;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.7em;
+}
+
+/* 3. BLOG MAIN TITLE */
+.blog-title {
+  font-family: "Great Vibes", cursive !important;
+  font-size: 2.7rem !important;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+/* 4. BLOG SUBTITLE (Gold, Custom Script) */
+.blog-title-accent {
+  font-family: "Dancing Script OT", "Lora", serif !important;
+  font-size: 1.32rem;
+  color: #ffc300 !important;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+  display: block;
+  text-align: center;
+}
+
+/* 5. SECTION TITLE (Sa loob ng blog) */
+.blog-section-title {
+  font-family: "Great Vibes", cursive !important;
+  color: #f7e4c2;
+  background: #181818;
+  font-size: 1.23rem;
+  font-weight: 700;
+  padding: 11px 28px 8px 28px;
+  border-radius: 10px;
+  margin: 1.7em 0 1em 0;
+  box-shadow: 0 1px 6px #0003;
+  text-align: center;
+  letter-spacing: 0.8px;
+  border: none;
+}
+
+/* 6. HIGHLIGHTED SECTION (if you need black bg + gold text heading) */
+.highlight-section {
+  font-family: "Great Vibes", cursive !important;
+  font-size: 2.2rem;
+  color: #ffc300;
+  background: #181818;
+  font-weight: 700;
+  padding: 9px 14px;
+  border-radius: 7px;
+  margin: 1.2em 0 0.7em 0;
+  text-align: center;
+  display: block;
+}
+
+/* 7. BLOG META */
+.blog-meta {
+  font-size: 0.97rem;
+  color: #bababa;
+  margin-bottom: 14px;
+}
+
+/* 8. MAIN BLOG CARD & IMAGES */
+.blog-section {
+  background: #181818;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.blog-card {
+  background: #232323;
+  border-radius: 20px;
+  box-shadow: 0 4px 32px #0007;
+  padding: 36px 28px 30px 28px;
+  margin-bottom: 18px;
+  position: relative;
+}
+.blog-img-main {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 18px #0006;
+}
+.blog-photo-card {
+  background: #181818;
+  border-radius: 13px;
+  box-shadow: 0 2px 8px #0005;
+  padding: 10px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.blog-img-small {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px #0007;
+  margin-bottom: 8px;
+}
+.photo-caption {
+  color: #bababa;
+  font-size: 0.97rem;
+}
+
+/* 9. QUOTES, LISTS, CTA */
+.blog-quote {
+  font-family: "Lora", serif !important;
+  border-left: 4px solid #ffd700;
+  padding-left: 16px;
+  color: #ffd700;
+  font-size: 1.1rem;
+  background: #1a1a1a;
+  margin: 18px 0;
+  font-style: italic;
+}
+.blog-list {
+  color: #eaeaea;
+  font-size: 1.05rem;
+  margin-left: 20px;
+  margin-bottom: 22px;
+  font-family: "Lora", serif !important;
+}
+.blog-cta-box {
+  background: #212121;
+  border: 2px solid #ffe49d;
+  border-radius: 14px;
+  color: #a6893f;
+  font-size: 1.09rem;
+  font-weight: 600;
+  padding: 16px 16px;
+  margin: 28px 0 18px 0;
+  text-align: center;
+}
+.blog-link {
+  color: #ffd700;
+  text-decoration: underline;
+  font-weight: 600;
+}
+.blog-link:hover {
+  color: #bfa700;
+}
+.blog-tags {
+  margin-bottom: 12px;
+}
+.blog-ending {
+  color: #bababa;
+  font-size: 1.01rem;
+  margin-top: 22px;
+}
+
+/* 10. SIDEBAR STYLES */
+.blog-sidebar {
+  background: #232323;
+  border-radius: 18px;
+  box-shadow: 0 2px 18px #0007;
+  padding: 22px 14px 15px 14px;
+  margin-bottom: 30px;
+}
+.sidebar-title {
+  color: #fafafa;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 1.09rem;
+  letter-spacing: 0.5px;
+  font-family: "Lora", serif !important;
+}
+.sidebar-suggestion {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: #181818;
+  border-radius: 10px;
+  padding: 11px 8px 8px 6px;
+  margin-bottom: 13px;
+  box-shadow: 0 1px 8px #0003;
+  transition: box-shadow 0.18s;
+}
+.sidebar-suggestion:hover {
+  box-shadow: 0 4px 22px #ffe49d44;
+}
+.sidebar-img {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #0005;
+  flex-shrink: 0;
+}
+.sidebar-link-title {
+  color: #ffe49d;
+  font-size: 1.01rem;
+  margin-bottom: 2px;
+  font-weight: 700;
+  font-family: "Lora", serif !important;
+}
+.sidebar-link-desc {
+  color: #bababa;
+  font-size: 0.93rem;
+  margin-bottom: 0;
+  font-family: "Lora", serif !important;
+}
+.sidebar-link {
+  color: #ffd700;
+  font-size: 0.97rem;
+  font-family: "Lora", serif !important;
+}
+.sidebar-link:hover {
+  color: #bfa700;
+}
+
+/* 11. RESPONSIVE: MOBILE & TABLET */
+@media (max-width: 991px) {
+  .blog-section {
+    padding-top: 10px;
+    padding-bottom: 14px;
+  }
+  .blog-card,
+  .blog-sidebar {
+    padding: 11px 2vw 14px 2vw;
+    border-radius: 12px;
+  }
+  .blog-title {
+    font-size: 1.5rem !important;
+    margin-bottom: 4px;
+  }
+  .blog-title-accent {
+    font-size: 1rem;
+    margin-top: 2px;
+  }
+  .blog-img-main {
+    max-width: 95vw;
+    margin-bottom: 8px;
+    border-radius: 8px;
+  }
+  .blog-photo-card {
+    padding: 5px;
+    border-radius: 7px;
+  }
+  .blog-img-small {
+    max-width: 95vw;
+    border-radius: 7px;
+    margin-bottom: 3px;
+  }
+  .sidebar-img {
+    width: 42px;
+    height: 42px;
+    border-radius: 6px;
+  }
+  .blog-section-title,
+  .highlight-section {
+    font-size: 0.99rem;
+    padding: 7px 7px;
+  }
+}
+@media (max-width: 600px) {
+  .blog-title {
+    font-size: 1.13rem !important;
+  }
+  .blog-title-accent {
+    font-size: 0.96rem;
+  }
+}
+
+.featured-blog-card {
+  min-height: 320px;
+  margin-bottom: 38px;
+  border: none;
+  background: #181818 !important;
+}
+.featured-card-img {
+  min-height: 320px;
+  max-height: 380px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.featured-blog-wrap {
+  display: flex;
+  background: #191919;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px #0006;
+  margin: 0 auto 28px auto;
+  max-width: 1050px;
+  min-height: 320px;
+}
+.featured-blog-img {
+  flex: 1 1 350px;
+  min-width: 250px;
+  max-width: 400px;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  background: #222;
+}
+.featured-blog-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  min-height: 320px;
+  max-height: 420px;
+}
+.featured-blog-body {
+  flex: 2 1 500px;
+  padding: 42px 40px 36px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #232323;
+}
+.featured-title {
+  font-family: "Lora", serif;
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #ffe49d;
+  margin-bottom: 7px;
+  line-height: 1.12;
+}
+.featured-accent {
+  font-family: "Great Vibes", cursive;
+  font-size: 1.18rem;
+  color: #ffc300;
+  font-weight: 500;
+  display: block;
+  margin-top: 0px;
+  letter-spacing: 1.1px;
+}
+.featured-desc {
+  font-size: 1.09rem;
+  color: #eaeaea;
+  margin: 18px 0 24px 0;
+}
+.featured-btn {
+  border-radius: 8px;
+  font-weight: 700;
+  padding: 9px 28px;
+  font-size: 1.06rem;
+}
+
+.featured-blog-card-title {
+  background: rgba(10, 10, 10, 0.93);
+  color: #ffc300;
+  font-family: "Lora", serif;
+  font-size: 1.13rem;
+  font-weight: 700;
+  letter-spacing: 0.9px;
+  line-height: 1.16;
+  padding: 12px 18px 8px 18px;
+  border-radius: 0 0 13px 13px;
+  margin-top: -8px;
+  text-align: center;
+  text-shadow: 0 2px 8px #000a;
+  margin-bottom: 0;
+  display: block;
+}
+.featured-card-accent {
+  display: block;
+  font-family: "Great Vibes", cursive;
+  font-size: 1.11rem;
+  font-weight: 500;
+  letter-spacing: 1.1px;
+  color: #ffc300;
+  margin-top: 3px;
+}
+@media (max-width: 991px) {
+  .featured-blog-card-title {
+    font-size: 1.02rem;
+    padding: 8px 8px 7px 8px;
+  }
+  .featured-card-accent {
+    font-size: 1.01rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .featured-blog-wrap {
+    flex-direction: column;
+    min-height: 100px;
+    max-width: 99vw;
+  }
+  .featured-blog-img img {
+    min-height: 140px;
+    max-height: 200px;
+  }
+  .featured-blog-body {
+    padding: 24px 14px 18px 14px;
+  }
+  .featured-title {
+    font-size: 1.21rem;
+  }
+  .featured-accent {
+    font-size: 1.07rem;
+  }
+}
+.cursive-heading {
+  font-family: "Great Vibes", cursive;
+  font-size: 2.3rem;
+  color: #ffe49d;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 0 3px 10px #000a;
+  margin-bottom: 1.2rem;
+  line-height: 1.06;
+}
+
+.cursive-heading:after {
+  content: "";
+  display: block;
+  width: 58px;
+  height: 3px;
+  margin: 18px auto 0 auto;
+  background: linear-gradient(90deg, #ffe49d 40%, #ffc300 100%);
+  border-radius: 2px;
+}
+
+@media (max-width: 991px) {
+  .cursive-heading {
+    font-size: 1.45rem;
+  }
+}
