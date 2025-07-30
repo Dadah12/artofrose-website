@@ -11,11 +11,6 @@ collections:
     folder: "Blog"
     create: true
     slug: "{{slug}}"
-    path: "{{slug}}/index"
-    format: "frontmatter"
-    extension: "md"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Image", name: "thumbnail", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
