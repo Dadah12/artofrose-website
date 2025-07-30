@@ -17,5 +17,5 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Image", name: "thumbnail", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
