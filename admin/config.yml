@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "Blog/{{slug}}"
-public_folder: "/Blog/{{slug}}"
+media_folder: "Blog/{{slug}}/images"
+public_folder: "/Blog/{{slug}}/images"
 
 collections:
   - name: "blog"
@@ -14,8 +14,6 @@ collections:
     path: "{{slug}}/index"
     format: "frontmatter"
     extension: "md"
-    media_folder: ""
-    public_folder: ""
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
