@@ -1,10 +1,10 @@
 backend:
   name: github
-  repo: https://github.com/Dadah12/artofrose-website # Replace with your actual GitHub repo
+  repo: Dadah12/artofrose-website
   branch: main
 
-media_folder: "blogs/{{slug}}" # Where uploaded images go
-public_folder: "/blogs/{{slug}}" # Public path for images
+media_folder: "blogs/{{slug}}"
+public_folder: "/blogs/{{slug}}"
 
 collections:
   - name: "blog"
