@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   branch: main
+  use_graphql: true
 
 media_folder: "blogs/{{slug}}"
 public_folder: "/blogs/{{slug}}"
