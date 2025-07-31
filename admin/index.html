@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8" />
     <title>Static CMS</title>
+    <script src="https://unpkg.com/@staticcms/app@^2.0.0/dist/static-cms-app.js"></script>
   </head>
   <body>
-    <script src="https://unpkg.com/@staticcms/app@^2.0.0/dist/static-cms-app.js"></script>
     <script>
       window.CMS_MANUAL_INIT = true;
     </script>
-    <script src="config.js"></script>
+    <script src="/admin/config.js"></script>
+    <script>
+      StaticCms.initCMS({ config });
+    </script>
   </body>
 </html>
