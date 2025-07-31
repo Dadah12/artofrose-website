@@ -1,9 +1,7 @@
 backend:
-  name: github
-  repo: Dadah12/artofrose-website
+  name: git-gateway
   branch: main
   use_graphql: true
-  auth_scope: repo
 
 media_folder: "blogs/{{slug}}"
 public_folder: "/blogs/{{slug}}"
