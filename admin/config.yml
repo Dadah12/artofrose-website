@@ -2,15 +2,18 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "images/uploads" # saan sinesave sa repo ang images
+public_folder: "/images/uploads" # paano ito i-access sa website
 
 collections:
-  - name: "blogs"
+  - name: "blog"
     label: "Blog Posts"
     folder: "Blog"
     create: true
     slug: "{{slug}}"
+    format: "md"
+    extension: "md"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Feature Image", name: "feature_image", widget: "image" }

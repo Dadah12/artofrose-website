@@ -2,16 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Static CMS</title>
+    <title>Content Manager</title>
+    <!-- Load Decap CMS app -->
     <script src="https://unpkg.com/@staticcms/app@^2.0.0/dist/static-cms-app.js"></script>
+    <!-- Point to the YAML config -->
+    <link href="config.yml" type="text/yaml" rel="cms-config-url" />
   </head>
   <body>
-    <script>
-      window.CMS_MANUAL_INIT = true;
-    </script>
-    <script src="/admin/config.js"></script>
-    <script>
-      StaticCms.initCMS({ config });
-    </script>
+    <h1>Loading content editor...</h1>
   </body>
 </html>
