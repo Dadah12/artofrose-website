@@ -3,10 +3,36 @@
   <head>
     <meta charset="utf-8" />
     <title>Content Manager</title>
+
+    <!-- Manual init flag -->
+    <script>
+      window.CMS_MANUAL_INIT = true;
+    </script>
+
+    <!-- Load CMS -->
     <script src="https://unpkg.com/@staticcms/app@^2.0.0/dist/static-cms-app.js"></script>
-    <link href="config.yml" type="text/yaml" rel="cms-config-url" />
+
+    <!-- Provide config inline so we can see if it loads -->
+    <script>
+      // Fetch the YAML config and initialize CMS explicitly
+      fetch("config.yml")
+        .then((res) => res.text())
+        .then((text) => {
+          // Simple YAML parser replacement could be needed, but for test assume default init
+          // Use built-in init to see if it throws error
+          const { initCMS } = window;
+          if (typeof initCMS === "function") {
+            initCMS(); // fallback to default behavior
+          } else if (window.CMS && typeof window.CMS.init === "function") {
+            window.CMS.init({ config: null });
+          }
+        })
+        .catch((e) => {
+          document.body.innerText = "Failed fetching config.yml: " + e.message;
+        });
+    </script>
   </head>
   <body>
-    <h1>Loading content editor...</h1>
+    <h1>Loading content editor (manual debug)...</h1>
   </body>
 </html>
