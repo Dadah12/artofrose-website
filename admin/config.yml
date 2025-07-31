@@ -1,16 +1,21 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: https://github.com/Dadah12/artofrose-website # Replace with your actual GitHub repo
   branch: main
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "blogs/{{slug}}" # Where uploaded images go
+public_folder: "/blogs/{{slug}}" # Public path for images
 
 collections:
   - name: "blog"
     label: "Blog"
-    folder: "Blog"
+    folder: "blogs"
     create: true
     slug: "{{slug}}"
+    path: "{{slug}}/index"
+    format: "frontmatter"
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
