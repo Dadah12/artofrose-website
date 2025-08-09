@@ -217,6 +217,51 @@ h3,
 /*---------------------------------------
   NAVBAR (Glass)
 ----------------------------------------*/
+
+/* === Fixed + auto-hide navbar === */
+#site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+  transform: translateY(0);
+  transition: transform 0.25s ease;
+}
+#site-header.nav-hide {
+  transform: translateY(-110%);
+} /* hide on scroll down */
+
+/* Full-width glass bar; iwas “nasa gilid” at “dalawang container” look */
+#site-header .navbar {
+  width: 100%;
+  background: rgba(26, 26, 26, 0.7); /* glass look */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  border-radius: 0; /* remove big rounded when fixed */
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem; /* not too tall */
+}
+
+/* Logo size (mas maliit) */
+#site-header .navbar-brand img {
+  height: 56px;
+  width: auto;
+  display: block;
+}
+@media (max-width: 992px) {
+  #site-header .navbar-brand img {
+    height: 46px;
+  }
+}
+
+/* Offset body para di matakpan ang content (we'll update exact height via JS too) */
+body {
+  padding-top: 80px;
+}
+
 .navbar {
   z-index: 9;
   right: 0;
