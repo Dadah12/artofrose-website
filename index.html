@@ -22,14 +22,12 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/bootstrap-icons.css" rel="stylesheet">
 
-        <link rel="stylesheet" href="css/magnific-popup.css">
-
         <link href="css/aos.css" rel="stylesheet">
 
         <link href="css/style.css" rel="stylesheet">
         <!-- GOOGLE FONTS FOR ART OF ROSE BRAND -->
         <link href="https://fonts.googleapis.com/css2?family=Allura&family=Dancing+Script:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
-
+        
 
 <!--
 
@@ -66,41 +64,10 @@ Art of Rose
                 <div class="overlay"></div>
             </section>
 
-            <nav class="navbar navbar-expand-lg glass-navbar shadow-lg">
-                <div class="container">
-                    <a class="navbar-brand" href="index.html">
-    <img src="images/logo.png" alt="Art of Rose Logo" style="height:80px;width:auto;">
-</a>
+            <!-- NAV (from partial) -->
+<div data-include="partials/navbar.html"></div>
 
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
 
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav mx-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#hero">Home</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="#about">About</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="#portfolio">Portfolio</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="#blogs">Blogs</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="#contact">Contact Us</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
 
             <section class="section-padding pb-0" id="about">
     <div class="container mb-5 pb-lg-5">
@@ -258,905 +225,1088 @@ Art of Rose
                                 
 
 
-            <!-- PORTFOLIO -->
-   <section class="section-padding" id="portfolio">
+            <!-- ========================= PORTFOLIO (Tabbed) ========================= -->
+<section class="section-padding" id="portfolio">
   <div class="container">
     <div class="col-12">
-      <h2 class="mb-2 text-center section-title">Choose Your Style</h2>
-      <p class="text-center" style="color:#ffc300;font-family:'Lora',serif;font-size:1.08rem;max-width:540px;margin:0 auto 28px auto;">
-        Explore our unique art styles and find the perfect look for your custom portrait, illustration, or creative project. Click <b>Order Now</b> below your chosen style to start your one-of-a-kind artwork!
+      <h2 class="mb-2 text-center section-title">Our Portfolio</h2>
+      <p class="text-center" style="color:#ffc300;font-family:'Lora',serif;font-size:1.08rem;max-width:640px;margin:0 auto 28px auto;">
+        Shop custom portraits, browse Fantasy Portraitss, and explore Rose's digital & traditional works. Click a tab to switch categories.
       </p>
     </div>
 
-    <!-- DIGITAL ARTWORKS -->
-    <h3 class="section-title mb-3">Digital Artworks</h3>
-    <div class="swiper portfolio-swiper mb-5" id="digital-swiper">
-      <div class="swiper-wrapper">
+    <!-- Tabs -->
+    <ul class="nav nav-tabs justify-content-center mb-4" id="portfolioTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="shop-tab" data-bs-toggle="tab" data-bs-target="#shop" type="button" role="tab" aria-controls="shop" aria-selected="true">Shop</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="digital-portraits-tab" data-bs-toggle="tab" data-bs-target="#digital-portraits" type="button" role="tab" aria-controls="digital-portraits" aria-selected="false">Digital Portraits</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="traditional-portraits-tab" data-bs-toggle="tab" data-bs-target="#traditional-portraits" type="button" role="tab" aria-controls="traditional-portraits" aria-selected="false">Traditional Portraits</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="samples-tab" data-bs-toggle="tab" data-bs-target="#samples" type="button" role="tab" aria-controls="samples" aria-selected="false">Fantasy Portraitss</button>
+      </li>
+    </ul>
 
-        <!-- Card 1 -->
-        <div class="swiper-slide portfolio-card testimonial-card">
-          <a href="images/digital artworks/1.jpg" data-lightbox="digital-gallery" data-title="Digital Art 1">
-            <img src="images/digital artworks/1.jpg" alt="Digital Art 1" class="portfolio-thumb-img" loading="lazy" />
-          </a>
-          <div class="portfolio-info">
-  <div class="portfolio-title">Digital Art 1</div>
-  <div class="portfolio-description">
-    Commissioned digital portraits, capturing real emotions and beautiful moments with a modern touch.
-  </div>
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYabJZwB0qbXwro8VYy0UrEui97dVPwyNDCtQJ1Y1WYJ_kaQ/viewform?usp=header" target="_blank" class="btn btn-order-now mt-2">Order Now</a>
+    <div class="tab-content" id="portfolioTabsContent">
 
-</div>
-
-        </div>
-
-        <!-- Card 2 -->
-        <div class="swiper-slide portfolio-card testimonial-card">
-          <a href="images/digital artworks/2.jpg" data-lightbox="digital-gallery" data-title="Digital Art 2">
-            <img src="images/digital artworks/2.jpg" alt="Digital Art 2" class="portfolio-thumb-img" loading="lazy" />
-          </a>
-          <div class="portfolio-info">
-            <div class="portfolio-title">Digital Art 2</div>
-            <div class="portfolio-medium">Art of Rose</div>
-          </div>
-        </div>
-        
-        <!-- Card 3 -->
-        <div class="swiper-slide portfolio-card testimonial-card">
-          <a href="images/digital artworks/3.jpg" data-lightbox="digital-gallery" data-title="Digital Art 3">
-            <img src="images/digital artworks/3.jpg" alt="Digital Art 3" class="portfolio-thumb-img" loading="lazy" />
-          </a>
-          <div class="portfolio-info">
-            <div class="portfolio-title">Digital Art 3</div>
-            <div class="portfolio-medium">Art of Rose</div>
-          </div>
-        </div>
-        
-        <!-- Card 4 -->
-        <div class="swiper-slide portfolio-card testimonial-card">
-          <a href="images/digital artworks/4.jpg" data-lightbox="digital-gallery" data-title="Digital Art 4">
-            <img src="images/digital artworks/4.jpg" alt="Digital Art 4" class="portfolio-thumb-img" loading="lazy" />
-          </a>
-          <div class="portfolio-info">
-            <div class="portfolio-title">Digital Art 4</div>
-            <div class="portfolio-medium">Art of Rose</div>
-          </div>
-        </div>
-        
-        <!-- Card 5 -->
-        <div class="swiper-slide portfolio-card testimonial-card">
-          <a href="images/digital artworks/5.jpg" data-lightbox="digital-gallery" data-title="Digital Art 5">
-            <img src="images/digital artworks/5.jpg" alt="Digital Art 5" class="portfolio-thumb-img" loading="lazy" />
-          </a>
-          <div class="portfolio-info">
-            <div class="portfolio-title">Digital Art 5</div>
-            <div class="portfolio-medium">Art of Rose</div>
-          </div>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="swiper-slide portfolio-card testimonial-card">
-          <a href="images/digital artworks/6.jpg" data-lightbox="digital-gallery" data-title="Digital Art 6">
-            <img src="images/digital artworks/6.jpg" alt="Digital Art 6" class="portfolio-thumb-img" loading="lazy" />
-          </a>
-          <div class="portfolio-info">
-            <div class="portfolio-title">Digital Art 6</div>
-            <div class="portfolio-medium">Art of Rose</div>
-          </div>
-        </div>
-
-         <!-- Card 7 -->
-<div class="swiper-slide portfolio-card testimonial-card">
-  <a href="images/digital artworks/7.jpg" data-lightbox="digital-gallery" data-title="Digital Art 7">
-    <img src="images/digital artworks/7.jpg" alt="Digital Art 7" class="portfolio-thumb-img" loading="lazy" />
-  </a>
-  <div class="portfolio-info">
-    <div class="portfolio-title">Digital Art 7</div>
-    <div class="portfolio-description">
-      Commissioned digital portraits, capturing real emotions and beautiful moments with a modern touch.
+      <!-- ========================= TAB: SHOP ========================= -->
+      <div class="tab-pane fade show active" id="shop" role="tabpanel" aria-labelledby="shop-tab">
+        <div class="row g-4">
+          <!-- Shop Item: Digital Portrait Commission -->
+          <div class="col-12 col-sm-6 col-lg-4">
+  <div class="card h-100 shadow-sm border-0" style="border-radius:18px;">
+    <a href="images/digital artworks/1.jpg" data-lightbox="shop-gallery" data-title="Digital Portrait Commission">
+      <picture>
+        <source type="image/avif" srcset="optimized/digital artworks/1.avif">
+        <source type="image/webp" srcset="optimized/digital artworks/1.webp">
+        <img src="images/digital artworks/1.jpg" alt="Digital portrait commission sample" class="card-img-top" style="height:270px;object-fit:cover;border-radius:18px 18px 0 0;">
+      </picture>
+    </a>
+    <div class="card-body d-flex flex-column">
+      <h5 class="portfolio-title mb-1">Digital Portrait Commission</h5>
+      <p class="portfolio-description mb-3">Personalized digital painting with realistic details. Perfect for gifts and profile art.</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYabJZwB0qbXwro8VYy0UrEui97dVPwyNDCtQJ1Y1WYJ_kaQ/viewform?usp=header" target="_blank" class="btn btn-warning mt-auto">Order Digital</a>
     </div>
   </div>
 </div>
 
-<!-- Card 8 -->
-<div class="swiper-slide portfolio-card testimonial-card">
-  <a href="images/digital artworks/8.jpg" data-lightbox="digital-gallery" data-title="Digital Art 8">
-    <img src="images/digital artworks/8.jpg" alt="Digital Art 8" class="portfolio-thumb-img" loading="lazy" />
-  </a>
-  <div class="portfolio-info">
-    <div class="portfolio-title">Digital Art 8</div>
-    <div class="portfolio-description">
-      Commissioned digital portraits, capturing real emotions and beautiful moments with a modern touch.
+<!-- Shop Item: Oil / Traditional Portrait Commission -->
+<div class="col-12 col-sm-6 col-lg-4">
+  <div class="card h-100 shadow-sm border-0" style="border-radius:18px;">
+    <a href="images/traditional/1.jpg" data-lightbox="shop-gallery" data-title="Oil / Traditional Portrait Commission">
+      <picture>
+        <source type="image/avif" srcset="optimized/traditional/1.avif">
+        <source type="image/webp" srcset="optimized/traditional/1.webp">
+        <img src="images/traditional/1.jpg" alt="Oil portrait commission sample" class="card-img-top" style="height:270px;object-fit:cover;border-radius:18px 18px 0 0;">
+      </picture>
+    </a>
+    <div class="card-body d-flex flex-column">
+      <h5 class="portfolio-title mb-1">Oil / Traditional Portrait</h5>
+      <p class="portfolio-description mb-3">Hand-painted on canvas (oil, watercolor, or charcoal). Timeless and heirloom quality.</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-d4mzaw4cRGj8uEsiUh91Bw4ik1COrRQXaoqUS2z3XshZaQ/viewform?usp=header" target="_blank" class="btn btn-warning mt-auto">Order Traditional</a>
     </div>
   </div>
 </div>
 
-<!-- Card 9 -->
-<div class="swiper-slide portfolio-card testimonial-card">
-  <a href="images/digital artworks/9.jpg" data-lightbox="digital-gallery" data-title="Digital Art 9">
-    <img src="images/digital artworks/9.jpg" alt="Digital Art 9" class="portfolio-thumb-img" loading="lazy" />
-  </a>
-  <div class="portfolio-info">
-    <div class="portfolio-title">Digital Art 9</div>
-    <div class="portfolio-description">
-      Commissioned digital portraits, capturing real emotions and beautiful moments with a modern touch.
+<!-- Shop Item: Fantasy / Concept Commission -->
+<div class="col-12 col-sm-6 col-lg-4">
+  <div class="card h-100 shadow-sm border-0" style="border-radius:18px;">
+    <a href="images/Fantasy/1.jpeg" data-lightbox="shop-gallery" data-title="Fantasy / Concept Commission">
+      <picture>
+        <source type="image/avif" srcset="optimized/Fantasy/1.avif">
+        <source type="image/webp" srcset="optimized/Fantasy/1.webp">
+        <img src="images/Fantasy/1.jpeg" alt="Fantasy concept commission sample" class="card-img-top" style="height:270px;object-fit:cover;border-radius:18px 18px 0 0;">
+      </picture>
+    </a>
+    <div class="card-body d-flex flex-column">
+      <h5 class="portfolio-title mb-1">Fantasy / Concept Art</h5>
+      <p class="portfolio-description mb-3">Stylized characters and magical scenes—great for gifts, games, and story art.</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdtSMK6dGgSQ0GZIKh6FeOS_NWNb_MXe_pILhZ99O-VDe23VA/viewform?usp=header" target="_blank" class="btn btn-warning mt-auto">Order Fantasy</a>
     </div>
   </div>
 </div>
 
-<!-- Card 10 -->
-<div class="swiper-slide portfolio-card testimonial-card">
-  <a href="images/digital artworks/10.jpg" data-lightbox="digital-gallery" data-title="Digital Art 10">
-    <img src="images/digital artworks/10.jpg" alt="Digital Art 10" class="portfolio-thumb-img" loading="lazy" />
-  </a>
-  <div class="portfolio-info">
-    <div class="portfolio-title">Digital Art 10</div>
-    <div class="portfolio-description">
-      Commissioned digital portraits, capturing real emotions and beautiful moments with a modern touch.
-    </div>
-  </div>
+<!-- End Digital Artworks -->
+</div>
 </div>
 
-<!-- Card 11 -->
-<div class="swiper-slide portfolio-card testimonial-card">
-  <a href="images/digital artworks/11.jpg" data-lightbox="digital-gallery" data-title="Digital Art 11">
-    <img src="images/digital artworks/11.jpg" alt="Digital Art 11" class="portfolio-thumb-img" loading="lazy" />
-  </a>
-  <div class="portfolio-info">
-    <div class="portfolio-title">Digital Art 11</div>
-    <div class="portfolio-description">
-      Commissioned digital portraits, capturing real emotions and beautiful moments with a modern touch.
-    </div>
-  </div>
-</div>
-
-<!-- Card 12 -->
-<div class="swiper-slide portfolio-card testimonial-card">
-  <a href="images/digital artworks/12.jpg" data-lightbox="digital-gallery" data-title="Digital Art 12">
-    <img src="images/digital artworks/12.jpg" alt="Digital Art 12" class="portfolio-thumb-img" loading="lazy" />
-  </a>
-  <div class="portfolio-info">
-    <div class="portfolio-title">Digital Art 12</div>
-    <div class="portfolio-description">
-      Commissioned digital portraits, capturing real emotions and beautiful moments with a modern touch.
-    </div>
-  </div>
-</div>
-
-<!-- Card 13 -->
-<div class="swiper-slide portfolio-card testimonial-card">
-  <a href="images/digital artworks/13.jpg" data-lightbox="digital-gallery" data-title="Digital Art 13">
-    <img src="images/digital artworks/13.jpg" alt="Digital Art 13" class="portfolio-thumb-img" loading="lazy" />
-  </a>
-  <div class="portfolio-info">
-    <div class="portfolio-title">Digital Art 13</div>
-    <div class="portfolio-description">
-      Commissioned digital portraits, capturing real emotions and beautiful moments with a modern touch.
-    </div>
-  </div>
-</div>
-
-<!-- Card 14 -->
-<div class="swiper-slide portfolio-card testimonial-card">
-  <a href="images/digital artworks/14.jpg" data-lightbox="digital-gallery" data-title="Digital Art 14">
-    <img src="images/digital artworks/14.jpg" alt="Digital Art 14" class="portfolio-thumb-img" loading="lazy" />
-  </a>
-  <div class="portfolio-info">
-    <div class="portfolio-title">Digital Art 14</div>
-    <div class="portfolio-description">
-      Commissioned digital portraits, capturing real emotions and beautiful moments with a modern touch.
-    </div>
-  </div>
-</div>
-
-<!-- Card 15 -->
-<div class="swiper-slide portfolio-card testimonial-card">
-  <a href="images/digital artworks/15.jpg" data-lightbox="digital-gallery" data-title="Digital Art 15">
-    <img src="images/digital artworks/15.jpg" alt="Digital Art 15" class="portfolio-thumb-img" loading="lazy" />
-  </a>
-  <div class="portfolio-info">
-    <div class="portfolio-title">Digital Art 15</div>
-    <div class="portfolio-description">
-      Commissioned digital portraits, capturing real emotions and beautiful moments with a modern touch.
-    </div>
-  </div>
-</div>
-
-<!-- Card 16 -->
-<div class="swiper-slide portfolio-card testimonial-card">
-  <a href="images/digital artworks/16.jpg" data-lightbox="digital-gallery" data-title="Digital Art 16">
-    <img src="images/digital artworks/16.jpg" alt="Digital Art 16" class="portfolio-thumb-img" loading="lazy" />
-  </a>
-  <div class="portfolio-info">
-    <div class="portfolio-title">Digital Art 16</div>
-    <div class="portfolio-description">
-      Commissioned digital portraits, capturing real emotions and beautiful moments with a modern touch.
-    </div>
-  </div>
-</div>
-
-<!-- Card 17 -->
-<div class="swiper-slide portfolio-card testimonial-card">
-  <a href="images/digital artworks/17.jpg" data-lightbox="digital-gallery" data-title="Digital Art 17">
-    <img src="images/digital artworks/17.jpg" alt="Digital Art 17" class="portfolio-thumb-img" loading="lazy" />
-  </a>
-  <div class="portfolio-info">
-    <div class="portfolio-title">Digital Art 17</div>
-    <div class="portfolio-description">
-      Commissioned digital portraits, capturing real emotions and beautiful moments with a modern touch.
-    </div>
-  </div>
-</div>
-
-<!-- Card 18 -->
-<div class="swiper-slide portfolio-card testimonial-card">
-  <a href="images/digital artworks/18.jpg" data-lightbox="digital-gallery" data-title="Digital Art 18">
-    <img src="images/digital artworks/18.jpg" alt="Digital Art 18" class="portfolio-thumb-img" loading="lazy" />
-  </a>
-  <div class="portfolio-info">
-    <div class="portfolio-title">Digital Art 18</div>
-    <div class="portfolio-description">
-      Commissioned digital portraits, capturing real emotions and beautiful moments with a modern touch.
-    </div>
-  </div>
-</div>
-
-<!-- Card 19 -->
-<div class="swiper-slide portfolio-card testimonial-card">
-  <a href="images/digital artworks/19.jpg" data-lightbox="digital-gallery" data-title="Digital Art 19">
-    <img src="images/digital artworks/19.jpg" alt="Digital Art 19" class="portfolio-thumb-img" loading="lazy" />
-  </a>
-  <div class="portfolio-info">
-    <div class="portfolio-title">Digital Art 19</div>
-    <div class="portfolio-description">
-      Commissioned digital portraits, capturing real emotions and beautiful moments with a modern touch.
-    </div>
-  </div>
-</div>
-
-<!-- Card 20 -->
-<div class="swiper-slide portfolio-card testimonial-card">
-  <a href="images/digital artworks/20.jpg" data-lightbox="digital-gallery" data-title="Digital Art 20">
-    <img src="images/digital artworks/20.jpg" alt="Digital Art 20" class="portfolio-thumb-img" loading="lazy" />
-  </a>
-  <div class="portfolio-info">
-    <div class="portfolio-title">Digital Art 20</div>
-    <div class="portfolio-description">
-      Commissioned digital portraits, capturing real emotions and beautiful moments with a modern touch.
-    </div>
-  </div>
-</div>
-
-<!-- Card 21 -->
-<div class="swiper-slide portfolio-card testimonial-card">
-  <a href="images/digital artworks/21.jpg" data-lightbox="digital-gallery" data-title="Digital Art 21">
-    <img src="images/digital artworks/21.jpg" alt="Digital Art 21" class="portfolio-thumb-img" loading="lazy" />
-  </a>
-  <div class="portfolio-info">
-    <div class="portfolio-title">Digital Art 21</div>
-    <div class="portfolio-description">
-      Commissioned digital portraits, capturing real emotions and beautiful moments with a modern touch.
-    </div>
-  </div>
-</div>
-
-<!-- Card 22 -->
-<div class="swiper-slide portfolio-card testimonial-card">
-  <a href="images/digital artworks/22.jpg" data-lightbox="digital-gallery" data-title="Digital Art 22">
-    <img src="images/digital artworks/22.jpg" alt="Digital Art 22" class="portfolio-thumb-img" loading="lazy" />
-  </a>
-  <div class="portfolio-info">
-    <div class="portfolio-title">Digital Art 22</div>
-    <div class="portfolio-description">
-      Commissioned digital portraits, capturing real emotions and beautiful moments with a modern touch.
-    </div>
-  </div>
-</div>
-
-<!-- Card 23 -->
-<div class="swiper-slide portfolio-card testimonial-card">
-  <a href="images/digital artworks/23.jpg" data-lightbox="digital-gallery" data-title="Digital Art 23">
-    <img src="images/digital artworks/23.jpg" alt="Digital Art 23" class="portfolio-thumb-img" loading="lazy" />
-  </a>
-  <div class="portfolio-info">
-    <div class="portfolio-title">Digital Art 23</div>
-    <div class="portfolio-description">
-      Commissioned digital portraits, capturing real emotions and beautiful moments with a modern touch.
-    </div>
-  </div>
-</div>
-
-
-        
-      </div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-    </div>
-
-    <!-- FANTASY ARTWORKS -->
-<h3 class="section-title mb-3">Fantasy Artworks</h3>
-<div class="swiper portfolio-swiper mb-5" id="fantasy-swiper">
-  <div class="swiper-wrapper">
-
-    <!-- Card 1 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/Fantasy/1.jpeg" data-lightbox="fantasy-gallery" data-title="Fantasy Art 1">
-        <img src="images/Fantasy/1.jpeg" alt="Fantasy Art 1" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Fantasy Art 1</div>
-        <div class="portfolio-description">
-          Imaginative fantasy pieces inspired by dreams, legends, and magical worlds—bringing stories to life.
+<!-- ========================= TAB: DIGITAL PORTRAITS ========================= -->
+<div class="tab-pane fade" id="digital-portraits" role="tabpanel" aria-labelledby="digital-portraits-tab">
+  <div class="swiper portfolio-swiper mb-5" id="digital-portraits-swiper">
+    <div class="swiper-wrapper">
+      <!-- Repeatable Card Pattern (Digital) -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/digital artworks/1.jpg" data-lightbox="digital-portraits-gallery" data-title="Digital Portrait 1">
+          <picture>
+            <source type="image/avif" srcset="optimized/digital artworks/1.avif">
+            <source type="image/webp" srcset="optimized/digital artworks/1.webp">
+            <img src="images/digital artworks/1.jpg" alt="Digital portrait 1" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info">
+          <div class="portfolio-title">Digital Portrait 1</div>
+          <div class="portfolio-description">Commissioned digital portrait with a modern touch.</div>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYabJZwB0qbXwro8VYy0UrEui97dVPwyNDCtQJ1Y1WYJ_kaQ/viewform?usp=header" target="_blank" class="btn btn-order-now mt-2">Order Now</a>
         </div>
       </div>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdtSMK6dGgSQ0GZIKh6FeOS_NWNb_MXe_pILhZ99O-VDe23VA/viewform?usp=header" target="_blank" class="btn btn-order-now mt-2">Order Now</a>
 
-    </div>
-    <!-- Card 2 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/Fantasy/2.jpg" data-lightbox="fantasy-gallery" data-title="Fantasy Art 2">
-        <img src="images/Fantasy/2.jpg" alt="Fantasy Art 2" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Fantasy Art 2</div>
-        <div class="portfolio-medium">Art of Rose</div>
-      </div>
-    </div>
-    <!-- Card 3 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/Fantasy/3.jpg" data-lightbox="fantasy-gallery" data-title="Fantasy Art 3">
-        <img src="images/Fantasy/3.jpg" alt="Fantasy Art 3" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Fantasy Art 3</div>
-        <div class="portfolio-medium">Art of Rose</div>
-      </div>
-    </div>
-    <!-- Card 4 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/Fantasy/4.jpg" data-lightbox="fantasy-gallery" data-title="Fantasy Art 4">
-        <img src="images/Fantasy/4.jpg" alt="Fantasy Art 4" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Fantasy Art 4</div>
-        <div class="portfolio-medium">Art of Rose</div>
-      </div>
-    </div>
-    <!-- Card 5 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/Fantasy/5.jpg" data-lightbox="fantasy-gallery" data-title="Fantasy Art 5">
-        <img src="images/Fantasy/5.jpg" alt="Fantasy Art 5" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Fantasy Art 5</div>
-        <div class="portfolio-medium">Art of Rose</div>
-      </div>
-    </div>
-    <!-- Card 6 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/Fantasy/6.jpg" data-lightbox="fantasy-gallery" data-title="Fantasy Art 6">
-        <img src="images/Fantasy/6.jpg" alt="Fantasy Art 6" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Fantasy Art 6</div>
-        <div class="portfolio-medium">Art of Rose</div>
-      </div>
-    </div>
-    <!-- Card 7 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/Fantasy/7.jpg" data-lightbox="fantasy-gallery" data-title="Fantasy Art 7">
-        <img src="images/Fantasy/7.jpg" alt="Fantasy Art 7" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Fantasy Art 7</div>
-        <div class="portfolio-medium">Art of Rose</div>
-      </div>
-    </div>
-    <!-- Card 8 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/Fantasy/8.jpg" data-lightbox="fantasy-gallery" data-title="Fantasy Art 8">
-        <img src="images/Fantasy/8.jpg" alt="Fantasy Art 8" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Fantasy Art 8</div>
-        <div class="portfolio-medium">Art of Rose</div>
-      </div>
-    </div>
-    <!-- Card 9 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/Fantasy/9.jpg" data-lightbox="fantasy-gallery" data-title="Fantasy Art 9">
-        <img src="images/Fantasy/9.jpg" alt="Fantasy Art 9" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Fantasy Art 9</div>
-        <div class="portfolio-medium">Art of Rose</div>
-      </div>
-    </div>
-    <!-- Card 10 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/Fantasy/10.jpg" data-lightbox="fantasy-gallery" data-title="Fantasy Art 10">
-        <img src="images/Fantasy/10.jpg" alt="Fantasy Art 10" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Fantasy Art 10</div>
-        <div class="portfolio-medium">Art of Rose</div>
-      </div>
-    </div>
-    <!-- Card 11 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/Fantasy/11.jpg" data-lightbox="fantasy-gallery" data-title="Fantasy Art 11">
-        <img src="images/Fantasy/11.jpg" alt="Fantasy Art 11" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Fantasy Art 11</div>
-        <div class="portfolio-medium">Art of Rose</div>
-      </div>
-    </div>
-    <!-- Card 12 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/Fantasy/12.jpg" data-lightbox="fantasy-gallery" data-title="Fantasy Art 12">
-        <img src="images/Fantasy/12.jpg" alt="Fantasy Art 12" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Fantasy Art 12</div>
-        <div class="portfolio-medium">Art of Rose</div>
-      </div>
-    </div>
-    <!-- Card 13 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/Fantasy/13.jpg" data-lightbox="fantasy-gallery" data-title="Fantasy Art 13">
-        <img src="images/Fantasy/13.jpg" alt="Fantasy Art 13" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Fantasy Art 13</div>
-        <div class="portfolio-medium">Art of Rose</div>
-      </div>
-    </div>
-    <!-- Card 14 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/Fantasy/14.jpg" data-lightbox="fantasy-gallery" data-title="Fantasy Art 14">
-        <img src="images/Fantasy/14.jpg" alt="Fantasy Art 14" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Fantasy Art 14</div>
-        <div class="portfolio-medium">Art of Rose</div>
-      </div>
-    </div>
-  </div>
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-</div>
-
-
-    <!-- Traditional Artworks -->
-    <h3 class="section-title mb-3">Traditional Artworks</h3>
-<div class="swiper portfolio-swiper mb-5" id="traditional-swiper">
-  <div class="swiper-wrapper">
-
-    <!-- Card 1 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/1.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 1">
-        <img src="images/traditional/1.jpg" alt="Traditional Art 1" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 1</div>
-        <div class="portfolio-description">
-          Handcrafted traditional artworks made with passion, using timeless techniques to create lasting memories.
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/digital artworks/2.jpg" data-lightbox="digital-portraits-gallery" data-title="Digital Portrait 2">
+          <picture>
+            <source type="image/avif" srcset="optimized/digital artworks/2.avif">
+            <source type="image/webp" srcset="optimized/digital artworks/2.webp">
+            <img src="images/digital artworks/2.jpg" alt="Digital portrait 2" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info">
+          <div class="portfolio-title">Digital Portrait 2</div>
+          <div class="portfolio-medium">Art of Rose</div>
         </div>
       </div>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-d4mzaw4cRGj8uEsiUh91Bw4ik1COrRQXaoqUS2z3XshZaQ/viewform?usp=header" target="_blank" class="btn btn-order-now mt-2">Order Now</a>
 
-    </div>
-
-    <!-- Card 2 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/2.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 2">
-        <img src="images/traditional/2.jpg" alt="Traditional Art 2" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 2</div>
-        <div class="portfolio-medium">Art of Rose</div>
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/digital artworks/3.jpg" data-lightbox="digital-portraits-gallery" data-title="Digital Portrait 3">
+          <picture>
+            <source type="image/avif" srcset="optimized/digital artworks/3.avif">
+            <source type="image/webp" srcset="optimized/digital artworks/3.webp">
+            <img src="images/digital artworks/3.jpg" alt="Digital portrait 3" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info">
+          <div class="portfolio-title">Digital Portrait 3</div>
+          <div class="portfolio-medium">Art of Rose</div>
+        </div>
       </div>
-    </div>
 
-    <!-- Card 3 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/3.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 3">
-        <img src="images/traditional/3.jpg" alt="Traditional Art 3" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 3</div>
-        <div class="portfolio-medium">Art of Rose</div>
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/digital artworks/4.jpg" data-lightbox="digital-portraits-gallery" data-title="Digital Portrait 4">
+          <picture>
+            <source type="image/avif" srcset="optimized/digital artworks/4.avif">
+            <source type="image/webp" srcset="optimized/digital artworks/4.webp">
+            <img src="images/digital artworks/4.jpg" alt="Digital portrait 4" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info">
+          <div class="portfolio-title">Digital Portrait 4</div>
+          <div class="portfolio-medium">Art of Rose</div>
+        </div>
       </div>
-    </div>
 
-    <!-- Card 4 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/4.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 4">
-        <img src="images/traditional/4.jpg" alt="Traditional Art 4" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 4</div>
-        <div class="portfolio-medium">Art of Rose</div>
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/digital artworks/5.jpg" data-lightbox="digital-portraits-gallery" data-title="Digital Portrait 5">
+          <picture>
+            <source type="image/avif" srcset="optimized/digital artworks/5.avif">
+            <source type="image/webp" srcset="optimized/digital artworks/5.webp">
+            <img src="images/digital artworks/5.jpg" alt="Digital portrait 5" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info">
+          <div class="portfolio-title">Digital Portrait 5</div>
+          <div class="portfolio-medium">Art of Rose</div>
+        </div>
       </div>
-    </div>
 
-    <!-- Card 5 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/5.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 5">
-        <img src="images/traditional/5.jpg" alt="Traditional Art 5" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 5</div>
-        <div class="portfolio-medium">Art of Rose</div>
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/digital artworks/6.jpg" data-lightbox="digital-portraits-gallery" data-title="Digital Portrait 6">
+          <picture>
+            <source type="image/avif" srcset="optimized/digital artworks/6.avif">
+            <source type="image/webp" srcset="optimized/digital artworks/6.webp">
+            <img src="images/digital artworks/6.jpg" alt="Digital portrait 6" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info">
+          <div class="portfolio-title">Digital Portrait 6</div>
+          <div class="portfolio-medium">Art of Rose</div>
+        </div>
       </div>
-    </div>
 
-    <!-- Card 6 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/6.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 6">
-        <img src="images/traditional/6.jpg" alt="Traditional Art 6" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 6</div>
-        <div class="portfolio-medium">Art of Rose</div>
+      
+      <!-- 7 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/digital artworks/7.jpg" data-lightbox="digital-portraits-gallery" data-title="Digital Portrait 7">
+          <picture>
+            <source type="image/avif" srcset="optimized/digital artworks/7.avif">
+            <source type="image/webp" srcset="optimized/digital artworks/7.webp">
+            <img src="images/digital artworks/7.jpg" alt="Digital portrait 7" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Digital Portrait 7</div><div class="portfolio-medium">Art of Rose</div></div>
       </div>
-    </div>
 
-    <!-- Card 7 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/7.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 7">
-        <img src="images/traditional/7.jpg" alt="Traditional Art 7" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 7</div>
-        <div class="portfolio-medium">Art of Rose</div>
+      <!-- 8 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/digital artworks/8.jpg" data-lightbox="digital-portraits-gallery" data-title="Digital Portrait 8">
+          <picture>
+            <source type="image/avif" srcset="optimized/digital artworks/8.avif">
+            <source type="image/webp" srcset="optimized/digital artworks/8.webp">
+            <img src="images/digital artworks/8.jpg" alt="Digital portrait 8" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Digital Portrait 8</div><div class="portfolio-medium">Art of Rose</div></div>
       </div>
-    </div>
 
-    <!-- Card 8 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/8.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 8">
-        <img src="images/traditional/8.jpg" alt="Traditional Art 8" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 8</div>
-        <div class="portfolio-medium">Art of Rose</div>
+      <!-- 9 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/digital artworks/9.jpg" data-lightbox="digital-portraits-gallery" data-title="Digital Portrait 9">
+          <picture>
+            <source type="image/avif" srcset="optimized/digital artworks/9.avif">
+            <source type="image/webp" srcset="optimized/digital artworks/9.webp">
+            <img src="images/digital artworks/9.jpg" alt="Digital portrait 9" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Digital Portrait 9</div><div class="portfolio-medium">Art of Rose</div></div>
       </div>
-    </div>
 
-    <!-- Card 9 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/9.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 9">
-        <img src="images/traditional/9.jpg" alt="Traditional Art 9" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 9</div>
-        <div class="portfolio-medium">Art of Rose</div>
+      <!-- 10 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/digital artworks/10.jpg" data-lightbox="digital-portraits-gallery" data-title="Digital Portrait 10">
+          <picture>
+            <source type="image/avif" srcset="optimized/digital artworks/10.avif">
+            <source type="image/webp" srcset="optimized/digital artworks/10.webp">
+            <img src="images/digital artworks/10.jpg" alt="Digital portrait 10" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Digital Portrait 10</div><div class="portfolio-medium">Art of Rose</div></div>
       </div>
-    </div>
 
-    <!-- Card 10 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/10.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 10">
-        <img src="images/traditional/10.jpg" alt="Traditional Art 10" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 10</div>
-        <div class="portfolio-medium">Art of Rose</div>
+      <!-- 11 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/digital artworks/11.jpg" data-lightbox="digital-portraits-gallery" data-title="Digital Portrait 11">
+          <picture>
+            <source type="image/avif" srcset="optimized/digital artworks/11.avif">
+            <source type="image/webp" srcset="optimized/digital artworks/11.webp">
+            <img src="images/digital artworks/11.jpg" alt="Digital portrait 11" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Digital Portrait 11</div><div class="portfolio-medium">Art of Rose</div></div>
       </div>
-    </div>
 
-    <!-- Card 11 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/11.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 11">
-        <img src="images/traditional/11.jpg" alt="Traditional Art 11" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 11</div>
-        <div class="portfolio-medium">Art of Rose</div>
+      <!-- 12 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/digital artworks/12.jpg" data-lightbox="digital-portraits-gallery" data-title="Digital Portrait 12">
+          <picture>
+            <source type="image/avif" srcset="optimized/digital artworks/12.avif">
+            <source type="image/webp" srcset="optimized/digital artworks/12.webp">
+            <img src="images/digital artworks/12.jpg" alt="Digital portrait 12" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Digital Portrait 12</div><div class="portfolio-medium">Art of Rose</div></div>
       </div>
-    </div>
 
-    <!-- Card 12 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/12.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 12">
-        <img src="images/traditional/12.jpg" alt="Traditional Art 12" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 12</div>
-        <div class="portfolio-medium">Art of Rose</div>
+      <!-- 13 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/digital artworks/13.jpg" data-lightbox="digital-portraits-gallery" data-title="Digital Portrait 13">
+          <picture>
+            <source type="image/avif" srcset="optimized/digital artworks/13.avif">
+            <source type="image/webp" srcset="optimized/digital artworks/13.webp">
+            <img src="images/digital artworks/13.jpg" alt="Digital portrait 13" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Digital Portrait 13</div><div class="portfolio-medium">Art of Rose</div></div>
       </div>
-    </div>
 
-    <!-- Card 13 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/13.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 13">
-        <img src="images/traditional/13.jpg" alt="Traditional Art 13" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 13</div>
-        <div class="portfolio-medium">Art of Rose</div>
+      <!-- 14 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/digital artworks/14.jpg" data-lightbox="digital-portraits-gallery" data-title="Digital Portrait 14">
+          <picture>
+            <source type="image/avif" srcset="optimized/digital artworks/14.avif">
+            <source type="image/webp" srcset="optimized/digital artworks/14.webp">
+            <img src="images/digital artworks/14.jpg" alt="Digital portrait 14" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Digital Portrait 14</div><div class="portfolio-medium">Art of Rose</div></div>
       </div>
-    </div>
 
-    <!-- Card 14 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/14.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 14">
-        <img src="images/traditional/14.jpg" alt="Traditional Art 14" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 14</div>
-        <div class="portfolio-medium">Art of Rose</div>
+      <!-- 15 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/digital artworks/15.jpg" data-lightbox="digital-portraits-gallery" data-title="Digital Portrait 15">
+          <picture>
+            <source type="image/avif" srcset="optimized/digital artworks/15.avif">
+            <source type="image/webp" srcset="optimized/digital artworks/15.webp">
+            <img src="images/digital artworks/15.jpg" alt="Digital portrait 15" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Digital Portrait 15</div><div class="portfolio-medium">Art of Rose</div></div>
       </div>
-    </div>
 
-    <!-- Card 15 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/15.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 15">
-        <img src="images/traditional/15.jpg" alt="Traditional Art 15" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 15</div>
-        <div class="portfolio-medium">Art of Rose</div>
+      <!-- 16 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/digital artworks/16.jpg" data-lightbox="digital-portraits-gallery" data-title="Digital Portrait 16">
+          <picture>
+            <source type="image/avif" srcset="optimized/digital artworks/16.avif">
+            <source type="image/webp" srcset="optimized/digital artworks/16.webp">
+            <img src="images/digital artworks/16.jpg" alt="Digital portrait 16" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Digital Portrait 16</div><div class="portfolio-medium">Art of Rose</div></div>
       </div>
-    </div>
 
-    <!-- Card 16 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/16.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 16">
-        <img src="images/traditional/16.jpg" alt="Traditional Art 16" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 16</div>
-        <div class="portfolio-medium">Art of Rose</div>
+      <!-- 17 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/digital artworks/17.jpg" data-lightbox="digital-portraits-gallery" data-title="Digital Portrait 17">
+          <picture>
+            <source type="image/avif" srcset="optimized/digital artworks/17.avif">
+            <source type="image/webp" srcset="optimized/digital artworks/17.webp">
+            <img src="images/digital artworks/17.jpg" alt="Digital portrait 17" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Digital Portrait 17</div><div class="portfolio-medium">Art of Rose</div></div>
       </div>
-    </div>
 
-    <!-- Card 17 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/17.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 17">
-        <img src="images/traditional/17.jpg" alt="Traditional Art 17" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 17</div>
-        <div class="portfolio-medium">Art of Rose</div>
+      <!-- 18 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/digital artworks/18.jpg" data-lightbox="digital-portraits-gallery" data-title="Digital Portrait 18">
+          <picture>
+            <source type="image/avif" srcset="optimized/digital artworks/18.avif">
+            <source type="image/webp" srcset="optimized/digital artworks/18.webp">
+            <img src="images/digital artworks/18.jpg" alt="Digital portrait 18" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Digital Portrait 18</div><div class="portfolio-medium">Art of Rose</div></div>
       </div>
-    </div>
 
-    <!-- Card 18 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/18.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 18">
-        <img src="images/traditional/18.jpg" alt="Traditional Art 18" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 18</div>
-        <div class="portfolio-medium">Art of Rose</div>
+      <!-- 19 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/digital artworks/19.jpg" data-lightbox="digital-portraits-gallery" data-title="Digital Portrait 19">
+          <picture>
+            <source type="image/avif" srcset="optimized/digital artworks/19.avif">
+            <source type="image/webp" srcset="optimized/digital artworks/19.webp">
+            <img src="images/digital artworks/19.jpg" alt="Digital portrait 19" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Digital Portrait 19</div><div class="portfolio-medium">Art of Rose</div></div>
       </div>
-    </div>
 
-    <!-- Card 19 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/19.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 19">
-        <img src="images/traditional/19.jpg" alt="Traditional Art 19" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 19</div>
-        <div class="portfolio-medium">Art of Rose</div>
+      <!-- 20 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/digital artworks/20.jpg" data-lightbox="digital-portraits-gallery" data-title="Digital Portrait 20">
+          <picture>
+            <source type="image/avif" srcset="optimized/digital artworks/20.avif">
+            <source type="image/webp" srcset="optimized/digital artworks/20.webp">
+            <img src="images/digital artworks/20.jpg" alt="Digital portrait 20" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Digital Portrait 20</div><div class="portfolio-medium">Art of Rose</div></div>
       </div>
-    </div>
 
-    <!-- Card 20 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/20.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 20">
-        <img src="images/traditional/20.jpg" alt="Traditional Art 20" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 20</div>
-        <div class="portfolio-medium">Art of Rose</div>
+      <!-- 21 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/digital artworks/21.jpg" data-lightbox="digital-portraits-gallery" data-title="Digital Portrait 21">
+          <picture>
+            <source type="image/avif" srcset="optimized/digital artworks/21.avif">
+            <source type="image/webp" srcset="optimized/digital artworks/21.webp">
+            <img src="images/digital artworks/21.jpg" alt="Digital portrait 21" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Digital Portrait 21</div><div class="portfolio-medium">Art of Rose</div></div>
       </div>
-    </div>
 
-    <!-- Card 21 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/21.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 21">
-        <img src="images/traditional/21.jpg" alt="Traditional Art 21" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 21</div>
-        <div class="portfolio-medium">Art of Rose</div>
+      <!-- 22 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/digital artworks/22.jpg" data-lightbox="digital-portraits-gallery" data-title="Digital Portrait 22">
+          <picture>
+            <source type="image/avif" srcset="optimized/digital artworks/22.avif">
+            <source type="image/webp" srcset="optimized/digital artworks/22.webp">
+            <img src="images/digital artworks/22.jpg" alt="Digital portrait 22" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Digital Portrait 22</div><div class="portfolio-medium">Art of Rose</div></div>
       </div>
-    </div>
 
-    <!-- Card 22 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/22.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 22">
-        <img src="images/traditional/22.jpg" alt="Traditional Art 22" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 22</div>
-        <div class="portfolio-medium">Art of Rose</div>
+      <!-- 23 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/digital artworks/23.jpg" data-lightbox="digital-portraits-gallery" data-title="Digital Portrait 23">
+          <picture>
+            <source type="image/avif" srcset="optimized/digital artworks/23.avif">
+            <source type="image/webp" srcset="optimized/digital artworks/23.webp">
+            <img src="images/digital artworks/23.jpg" alt="Digital portrait 23" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Digital Portrait 23</div><div class="portfolio-medium">Art of Rose</div></div>
       </div>
-    </div>
 
-    <!-- Card 23 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/23.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 23">
-        <img src="images/traditional/23.jpg" alt="Traditional Art 23" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 23</div>
-        <div class="portfolio-medium">Art of Rose</div>
-      </div>
     </div>
-
-    <!-- Card 24 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/24.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 24">
-        <img src="images/traditional/24.jpg" alt="Traditional Art 24" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 24</div>
-        <div class="portfolio-medium">Art of Rose</div>
-      </div>
-    </div>
-
-    <!-- Card 25 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/25.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 25">
-        <img src="images/traditional/25.jpg" alt="Traditional Art 25" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 25</div>
-        <div class="portfolio-medium">Art of Rose</div>
-      </div>
-    </div>
-
-    <!-- Card 26 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/26.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 26">
-        <img src="images/traditional/26.jpg" alt="Traditional Art 26" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 26</div>
-        <div class="portfolio-medium">Art of Rose</div>
-      </div>
-    </div>
-
-    <!-- Card 27 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/27.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 27">
-        <img src="images/traditional/27.jpg" alt="Traditional Art 27" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 27</div>
-        <div class="portfolio-medium">Art of Rose</div>
-      </div>
-    </div>
-
-    <!-- Card 28 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/28.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 28">
-        <img src="images/traditional/28.jpg" alt="Traditional Art 28" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 28</div>
-        <div class="portfolio-medium">Art of Rose</div>
-      </div>
-    </div>
-
-    <!-- Card 29 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/29.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 29">
-        <img src="images/traditional/29.jpg" alt="Traditional Art 29" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 29</div>
-        <div class="portfolio-medium">Art of Rose</div>
-      </div>
-    </div>
-
-    <!-- Card 30 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/30.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 30">
-        <img src="images/traditional/30.jpg" alt="Traditional Art 30" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 30</div>
-        <div class="portfolio-medium">Art of Rose</div>
-      </div>
-    </div>
-
-    <!-- Card 31 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/31.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 31">
-        <img src="images/traditional/31.jpg" alt="Traditional Art 31" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 31</div>
-        <div class="portfolio-medium">Art of Rose</div>
-      </div>
-    </div>
-
-    <!-- Card 32 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/32.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 32">
-        <img src="images/traditional/32.jpg" alt="Traditional Art 32" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 32</div>
-        <div class="portfolio-medium">Art of Rose</div>
-      </div>
-    </div>
-
-    <!-- Card 33 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/33.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 33">
-        <img src="images/traditional/33.jpg" alt="Traditional Art 33" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 33</div>
-        <div class="portfolio-medium">Art of Rose</div>
-      </div>
-    </div>
-
-    <!-- Card 34 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/34.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 34">
-        <img src="images/traditional/34.jpg" alt="Traditional Art 34" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 34</div>
-        <div class="portfolio-medium">Art of Rose</div>
-      </div>
-    </div>
-
-    <!-- Card 35 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/35.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 35">
-        <img src="images/traditional/35.jpg" alt="Traditional Art 35" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 35</div>
-        <div class="portfolio-medium">Art of Rose</div>
-      </div>
-    </div>
-
-    <!-- Card 36 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/36.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 36">
-        <img src="images/traditional/36.jpg" alt="Traditional Art 36" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 36</div>
-        <div class="portfolio-medium">Art of Rose</div>
-      </div>
-    </div>
-
-    <!-- Card 37 -->
-    <div class="swiper-slide portfolio-card testimonial-card">
-      <a href="images/traditional/37.jpg" data-lightbox="traditional-gallery" data-title="Traditional Art 37">
-        <img src="images/traditional/37.jpg" alt="Traditional Art 37" class="portfolio-thumb-img" loading="lazy" />
-      </a>
-      <div class="portfolio-info">
-        <div class="portfolio-title">Traditional Art 37</div>
-        <div class="portfolio-medium">Art of Rose</div>
-      </div>
-    </div>
-
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
   </div>
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
+</div>
+
+<!-- ========================= TAB: TRADITIONAL PORTRAITS ========================= -->
+<div class="tab-pane fade" id="traditional-portraits" role="tabpanel" aria-labelledby="traditional-portraits-tab">
+  <div class="swiper portfolio-swiper mb-5" id="traditional-portraits-swiper">
+    <div class="swiper-wrapper">
+      <!-- Repeatable Card Pattern (Traditional) -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/traditional/1.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 1">
+          <picture>
+            <source type="image/avif" srcset="optimized/traditional/1.avif">
+            <source type="image/webp" srcset="optimized/traditional/1.webp">
+            <img src="images/traditional/1.jpg" alt="Traditional portrait 1" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info">
+          <div class="portfolio-title">Traditional Portrait 1</div>
+          <div class="portfolio-description">Handcrafted on canvas with timeless techniques.</div>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-d4mzaw4cRGj8uEsiUh91Bw4ik1COrRQXaoqUS2z3XshZaQ/viewform?usp=header" target="_blank" class="btn btn-order-now mt-2">Order Now</a>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/traditional/2.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 2">
+          <picture>
+            <source type="image/avif" srcset="optimized/traditional/2.avif">
+            <source type="image/webp" srcset="optimized/traditional/2.webp">
+            <img src="images/traditional/2.jpg" alt="Traditional portrait 2" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 2</div><div class="portfolio-medium">Art of Rose</div></div>
+      </div>
+
+      <!-- 3 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/traditional/3.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 3">
+          <picture>
+            <source type="image/avif" srcset="optimized/traditional/3.avif">
+            <source type="image/webp" srcset="optimized/traditional/3.webp">
+            <img src="images/traditional/3.jpg" alt="Traditional portrait 3" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 3</div><div class="portfolio-medium">Art of Rose</div></div>
+      </div>
+
+      <!-- 4 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/traditional/4.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 4">
+          <picture>
+            <source type="image/avif" srcset="optimized/traditional/4.avif">
+            <source type="image/webp" srcset="optimized/traditional/4.webp">
+            <img src="images/traditional/4.jpg" alt="Traditional portrait 4" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 4</div><div class="portfolio-medium">Art of Rose</div></div>
+      </div>
+      <!-- 5 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/traditional/5.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 5">
+          <picture>
+            <source type="image/avif" srcset="optimized/traditional/5.avif">
+            <source type="image/webp" srcset="optimized/traditional/5.webp">
+            <img src="images/traditional/5.jpg" alt="Traditional portrait 5" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 5</div><div class="portfolio-medium">Art of Rose</div></div>
+      </div>
+
+      <!-- 6 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/traditional/6.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 6">
+          <picture>
+            <source type="image/avif" srcset="optimized/traditional/6.avif">
+            <source type="image/webp" srcset="optimized/traditional/6.webp">
+            <img src="images/traditional/6.jpg" alt="Traditional portrait 6" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 6</div><div class="portfolio-medium">Art of Rose</div></div>
+      </div>
+      <!-- 7 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/traditional/7.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 7">
+          <picture>
+            <source type="image/avif" srcset="optimized/traditional/7.avif">
+            <source type="image/webp" srcset="optimized/traditional/7.webp">
+            <img src="images/traditional/7.jpg" alt="Traditional portrait 7" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 7</div><div class="portfolio-medium">Art of Rose</div></div>
+      </div>
+      <!-- 8 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/traditional/8.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 8">
+          <picture>
+            <source type="image/avif" srcset="optimized/traditional/8.avif">
+            <source type="image/webp" srcset="optimized/traditional/8.webp">
+            <img src="images/traditional/8.jpg" alt="Traditional portrait 8" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 8</div><div class="portfolio-medium">Art of Rose</div></div>
+      </div>
+      <!-- 9 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/traditional/9.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 9">
+          <picture>
+            <source type="image/avif" srcset="optimized/traditional/9.avif">
+            <source type="image/webp" srcset="optimized/traditional/9.webp">
+            <img src="images/traditional/9.jpg" alt="Traditional portrait 9" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 9</div><div class="portfolio-medium">Art of Rose</div></div>
+      </div> 
+      <!-- 10 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/traditional/10.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 10">
+          <picture>
+            <source type="image/avif" srcset="optimized/traditional/10.avif">
+            <source type="image/webp" srcset="optimized/traditional/10.webp">
+            <img src="images/traditional/10.jpg" alt="Traditional portrait 10" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 10</div><div class="portfolio-medium">Art of Rose</div></div>
+      </div> 
+      <!-- 11 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/traditional/11.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 11">
+          <picture>
+            <source type="image/avif" srcset="optimized/traditional/11.avif">
+            <source type="image/webp" srcset="optimized/traditional/11.webp">
+            <img src="images/traditional/11.jpg" alt="Traditional portrait 11" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 11</div><div class="portfolio-medium">Art of Rose</div></div>
+      </div> 
+
+      <!-- 12 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/traditional/12.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 12">
+          <picture>
+            <source type="image/avif" srcset="optimized/traditional/12.avif">
+            <source type="image/webp" srcset="optimized/traditional/12.webp">
+            <img src="images/traditional/12.jpg" alt="Traditional portrait 12" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 12</div><div class="portfolio-medium">Art of Rose</div></div>
+      </div>  
+
+      <!-- 13 -->
+<div class="swiper-slide portfolio-card testimonial-card">
+  <a href="images/traditional/13.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 13">
+    <picture>
+      <source type="image/avif" srcset="optimized/traditional/13.avif">
+      <source type="image/webp" srcset="optimized/traditional/13.webp">
+      <img src="images/traditional/13.jpg" alt="Traditional portrait 13" class="portfolio-thumb-img" loading="lazy" />
+    </picture>
+  </a>
+  <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 13</div><div class="portfolio-medium">Art of Rose</div></div>
+</div>
+
+<!-- 14 -->
+<div class="swiper-slide portfolio-card testimonial-card">
+  <a href="images/traditional/14.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 14">
+    <picture>
+      <source type="image/avif" srcset="optimized/traditional/14.avif">
+      <source type="image/webp" srcset="optimized/traditional/14.webp">
+      <img src="images/traditional/14.jpg" alt="Traditional portrait 14" class="portfolio-thumb-img" loading="lazy" />
+    </picture>
+  </a>
+  <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 14</div><div class="portfolio-medium">Art of Rose</div></div>
+</div>
+
+<!-- 15 -->
+<div class="swiper-slide portfolio-card testimonial-card">
+  <a href="images/traditional/15.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 15">
+    <picture>
+      <source type="image/avif" srcset="optimized/traditional/15.avif">
+      <source type="image/webp" srcset="optimized/traditional/15.webp">
+      <img src="images/traditional/15.jpg" alt="Traditional portrait 15" class="portfolio-thumb-img" loading="lazy" />
+    </picture>
+  </a>
+  <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 15</div><div class="portfolio-medium">Art of Rose</div></div>
+</div>
+
+<!-- 16 -->
+<div class="swiper-slide portfolio-card testimonial-card">
+  <a href="images/traditional/16.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 16">
+    <picture>
+      <source type="image/avif" srcset="optimized/traditional/16.avif">
+      <source type="image/webp" srcset="optimized/traditional/16.webp">
+      <img src="images/traditional/16.jpg" alt="Traditional portrait 16" class="portfolio-thumb-img" loading="lazy" />
+    </picture>
+  </a>
+  <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 16</div><div class="portfolio-medium">Art of Rose</div></div>
+</div>
+
+<!-- 17 -->
+<div class="swiper-slide portfolio-card testimonial-card">
+  <a href="images/traditional/17.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 17">
+    <picture>
+      <source type="image/avif" srcset="optimized/traditional/17.avif">
+      <source type="image/webp" srcset="optimized/traditional/17.webp">
+      <img src="images/traditional/17.jpg" alt="Traditional portrait 17" class="portfolio-thumb-img" loading="lazy" />
+    </picture>
+  </a>
+  <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 17</div><div class="portfolio-medium">Art of Rose</div></div>
+</div>
+
+<!-- 18 -->
+<div class="swiper-slide portfolio-card testimonial-card">
+  <a href="images/traditional/18.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 18">
+    <picture>
+      <source type="image/avif" srcset="optimized/traditional/18.avif">
+      <source type="image/webp" srcset="optimized/traditional/18.webp">
+      <img src="images/traditional/18.jpg" alt="Traditional portrait 18" class="portfolio-thumb-img" loading="lazy" />
+    </picture>
+  </a>
+  <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 18</div><div class="portfolio-medium">Art of Rose</div></div>
+</div>
+
+<!-- 19 -->
+<div class="swiper-slide portfolio-card testimonial-card">
+  <a href="images/traditional/19.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 19">
+    <picture>
+      <source type="image/avif" srcset="optimized/traditional/19.avif">
+      <source type="image/webp" srcset="optimized/traditional/19.webp">
+      <img src="images/traditional/19.jpg" alt="Traditional portrait 19" class="portfolio-thumb-img" loading="lazy" />
+    </picture>
+  </a>
+  <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 19</div><div class="portfolio-medium">Art of Rose</div></div>
+</div>
+
+<!-- 20 -->
+<div class="swiper-slide portfolio-card testimonial-card">
+  <a href="images/traditional/20.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 20">
+    <picture>
+      <source type="image/avif" srcset="optimized/traditional/20.avif">
+      <source type="image/webp" srcset="optimized/traditional/20.webp">
+      <img src="images/traditional/20.jpg" alt="Traditional portrait 20" class="portfolio-thumb-img" loading="lazy" />
+    </picture>
+  </a>
+  <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 20</div><div class="portfolio-medium">Art of Rose</div></div>
+</div>
+
+<!-- 21 -->
+<div class="swiper-slide portfolio-card testimonial-card">
+  <a href="images/traditional/21.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 21">
+    <picture>
+      <source type="image/avif" srcset="optimized/traditional/21.avif">
+      <source type="image/webp" srcset="optimized/traditional/21.webp">
+      <img src="images/traditional/21.jpg" alt="Traditional portrait 21" class="portfolio-thumb-img" loading="lazy" />
+    </picture>
+  </a>
+  <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 21</div><div class="portfolio-medium">Art of Rose</div></div>
+</div>
+
+<!-- 22 -->
+<div class="swiper-slide portfolio-card testimonial-card">
+  <a href="images/traditional/22.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 22">
+    <picture>
+      <source type="image/avif" srcset="optimized/traditional/22.avif">
+      <source type="image/webp" srcset="optimized/traditional/22.webp">
+      <img src="images/traditional/22.jpg" alt="Traditional portrait 22" class="portfolio-thumb-img" loading="lazy" />
+    </picture>
+  </a>
+  <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 22</div><div class="portfolio-medium">Art of Rose</div></div>
+</div>
+
+<!-- 23 -->
+<div class="swiper-slide portfolio-card testimonial-card">
+  <a href="images/traditional/23.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 23">
+    <picture>
+      <source type="image/avif" srcset="optimized/traditional/23.avif">
+      <source type="image/webp" srcset="optimized/traditional/23.webp">
+      <img src="images/traditional/23.jpg" alt="Traditional portrait 23" class="portfolio-thumb-img" loading="lazy" />
+    </picture>
+  </a>
+  <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 23</div><div class="portfolio-medium">Art of Rose</div></div>
+</div>
+
+<!-- 24 -->
+<div class="swiper-slide portfolio-card testimonial-card">
+  <a href="images/traditional/24.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 24">
+    <picture>
+      <source type="image/avif" srcset="optimized/traditional/24.avif">
+      <source type="image/webp" srcset="optimized/traditional/24.webp">
+      <img src="images/traditional/24.jpg" alt="Traditional portrait 24" class="portfolio-thumb-img" loading="lazy" />
+    </picture>
+  </a>
+  <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 24</div><div class="portfolio-medium">Art of Rose</div></div>
+</div>
+
+<!-- 25 -->
+<div class="swiper-slide portfolio-card testimonial-card">
+  <a href="images/traditional/25.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 25">
+    <picture>
+      <source type="image/avif" srcset="optimized/traditional/25.avif">
+      <source type="image/webp" srcset="optimized/traditional/25.webp">
+      <img src="images/traditional/25.jpg" alt="Traditional portrait 25" class="portfolio-thumb-img" loading="lazy" />
+    </picture>
+  </a>
+  <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 25</div><div class="portfolio-medium">Art of Rose</div></div>
+</div>
+
+<!-- 26 -->
+<div class="swiper-slide portfolio-card testimonial-card">
+  <a href="images/traditional/26.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 26">
+    <picture>
+      <source type="image/avif" srcset="optimized/traditional/26.avif">
+      <source type="image/webp" srcset="optimized/traditional/26.webp">
+      <img src="images/traditional/26.jpg" alt="Traditional portrait 26" class="portfolio-thumb-img" loading="lazy" />
+    </picture>
+  </a>
+  <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 26</div><div class="portfolio-medium">Art of Rose</div></div>
+</div>
+
+<!-- 27 -->
+<div class="swiper-slide portfolio-card testimonial-card">
+  <a href="images/traditional/27.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 27">
+    <picture>
+      <source type="image/avif" srcset="optimized/traditional/27.avif">
+      <source type="image/webp" srcset="optimized/traditional/27.webp">
+      <img src="images/traditional/27.jpg" alt="Traditional portrait 27" class="portfolio-thumb-img" loading="lazy" />
+    </picture>
+  </a>
+  <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 27</div><div class="portfolio-medium">Art of Rose</div></div>
+</div>
+
+<!-- 28 -->
+<div class="swiper-slide portfolio-card testimonial-card">
+  <a href="images/traditional/28.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 28">
+    <picture>
+      <source type="image/avif" srcset="optimized/traditional/28.avif">
+      <source type="image/webp" srcset="optimized/traditional/28.webp">
+      <img src="images/traditional/28.jpg" alt="Traditional portrait 28" class="portfolio-thumb-img" loading="lazy" />
+    </picture>
+  </a>
+  <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 28</div><div class="portfolio-medium">Art of Rose</div></div>
+</div>
+
+<!-- 29 -->
+<div class="swiper-slide portfolio-card testimonial-card">
+  <a href="images/traditional/29.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 29">
+    <picture>
+      <source type="image/avif" srcset="optimized/traditional/29.avif">
+      <source type="image/webp" srcset="optimized/traditional/29.webp">
+      <img src="images/traditional/29.jpg" alt="Traditional portrait 29" class="portfolio-thumb-img" loading="lazy" />
+    </picture>
+  </a>
+  <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 29</div><div class="portfolio-medium">Art of Rose</div></div>
+</div>
+
+<!-- 30 -->
+<div class="swiper-slide portfolio-card testimonial-card">
+  <a href="images/traditional/30.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 30">
+    <picture>
+      <source type="image/avif" srcset="optimized/traditional/30.avif">
+      <source type="image/webp" srcset="optimized/traditional/30.webp">
+      <img src="images/traditional/30.jpg" alt="Traditional portrait 30" class="portfolio-thumb-img" loading="lazy" />
+    </picture>
+  </a>
+  <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 30</div><div class="portfolio-medium">Art of Rose</div></div>
+</div>
+
+<!-- 31 -->
+<div class="swiper-slide portfolio-card testimonial-card">
+  <a href="images/traditional/31.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 31">
+    <picture>
+      <source type="image/avif" srcset="optimized/traditional/31.avif">
+      <source type="image/webp" srcset="optimized/traditional/31.webp">
+      <img src="images/traditional/31.jpg" alt="Traditional portrait 31" class="portfolio-thumb-img" loading="lazy" />
+    </picture>
+  </a>
+  <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 31</div><div class="portfolio-medium">Art of Rose</div></div>
+</div>
+
+<!-- 32 -->
+<div class="swiper-slide portfolio-card testimonial-card">
+  <a href="images/traditional/32.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 32">
+    <picture>
+      <source type="image/avif" srcset="optimized/traditional/32.avif">
+      <source type="image/webp" srcset="optimized/traditional/32.webp">
+      <img src="images/traditional/32.jpg" alt="Traditional portrait 32" class="portfolio-thumb-img" loading="lazy" />
+    </picture>
+  </a>
+  <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 32</div><div class="portfolio-medium">Art of Rose</div></div>
+</div>
+
+<!-- 33 -->
+<div class="swiper-slide portfolio-card testimonial-card">
+  <a href="images/traditional/33.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 33">
+    <picture>
+      <source type="image/avif" srcset="optimized/traditional/33.avif">
+      <source type="image/webp" srcset="optimized/traditional/33.webp">
+      <img src="images/traditional/33.jpg" alt="Traditional portrait 33" class="portfolio-thumb-img" loading="lazy" />
+    </picture>
+  </a>
+  <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 33</div><div class="portfolio-medium">Art of Rose</div></div>
+</div>
+
+<!-- 34 -->
+<div class="swiper-slide portfolio-card testimonial-card">
+  <a href="images/traditional/34.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 34">
+    <picture>
+      <source type="image/avif" srcset="optimized/traditional/34.avif">
+      <source type="image/webp" srcset="optimized/traditional/34.webp">
+      <img src="images/traditional/34.jpg" alt="Traditional portrait 34" class="portfolio-thumb-img" loading="lazy" />
+    </picture>
+  </a>
+  <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 34</div><div class="portfolio-medium">Art of Rose</div></div>
+</div>
+
+<!-- 35 -->
+<div class="swiper-slide portfolio-card testimonial-card">
+  <a href="images/traditional/35.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 35">
+    <picture>
+      <source type="image/avif" srcset="optimized/traditional/35.avif">
+      <source type="image/webp" srcset="optimized/traditional/35.webp">
+      <img src="images/traditional/35.jpg" alt="Traditional portrait 35" class="portfolio-thumb-img" loading="lazy" />
+    </picture>
+  </a>
+  <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 35</div><div class="portfolio-medium">Art of Rose</div></div>
+</div>
+
+<!-- 36 -->
+<div class="swiper-slide portfolio-card testimonial-card">
+  <a href="images/traditional/36.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 36">
+    <picture>
+      <source type="image/avif" srcset="optimized/traditional/36.avif">
+      <source type="image/webp" srcset="optimized/traditional/36.webp">
+      <img src="images/traditional/36.jpg" alt="Traditional portrait 36" class="portfolio-thumb-img" loading="lazy" />
+    </picture>
+  </a>
+  <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 36</div><div class="portfolio-medium">Art of Rose</div></div>
+</div>
+
+<!-- 37 -->
+<div class="swiper-slide portfolio-card testimonial-card">
+  <a href="images/traditional/37.jpg" data-lightbox="traditional-portraits-gallery" data-title="Traditional Portrait 37">
+    <picture>
+      <source type="image/avif" srcset="optimized/traditional/37.avif">
+      <source type="image/webp" srcset="optimized/traditional/37.webp">
+      <img src="images/traditional/37.jpg" alt="Traditional portrait 37" class="portfolio-thumb-img" loading="lazy" />
+    </picture>
+  </a>
+  <div class="portfolio-info"><div class="portfolio-title">Traditional Portrait 37</div><div class="portfolio-medium">Art of Rose</div></div>
 </div>
 
 
-        
-
-
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
     </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
   </div>
+</div>
+
+<!-- ========================= TAB: Fantasy PortraitsS ========================= -->
+<div class="tab-pane fade" id="samples" role="tabpanel" aria-labelledby="samples-tab">
+  <div class="swiper portfolio-swiper mb-5" id="samples-swiper">
+    <div class="swiper-wrapper">
+      <!-- You can use your Fantasy images or sketch images as "samples" -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/Fantasy/1.jpeg" data-lightbox="samples-gallery" data-title="Fantasy Portraits 1">
+          <picture>
+            <source type="image/avif" srcset="optimized/Fantasy/1.avif">
+            <source type="image/webp" srcset="optimized/Fantasy/1.webp">
+            <img src="images/Fantasy/1.jpeg" alt="Fantasy Portraits 1" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info">
+          <div class="portfolio-title">Fantasy Portraits 1</div>
+          <div class="portfolio-description">Concept sketch / fantasy sample.</div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/Fantasy/2.jpg" data-lightbox="samples-gallery" data-title="Fantasy Portraits 2">
+          <picture>
+            <source type="image/avif" srcset="optimized/Fantasy/2.avif">
+            <source type="image/webp" srcset="optimized/Fantasy/2.webp">
+            <img src="images/Fantasy/2.jpg" alt="Fantasy Portraits 2" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Fantasy Portraits 2</div><div class="portfolio-medium">Art of Rose</div></div>
+      </div>
+
+      <!-- 3 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/Fantasy/3.jpg" data-lightbox="samples-gallery" data-title="Fantasy Portraits 3">
+          <picture>
+            <source type="image/avif" srcset="optimized/Fantasy/3.avif">
+            <source type="image/webp" srcset="optimized/Fantasy/3.webp">
+            <img src="images/Fantasy/3.jpg" alt="Fantasy Portraits 3" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Fantasy Portraits 3</div><div class="portfolio-medium">Art of Rose</div></div>
+      </div>
+
+      <!-- 4 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/Fantasy/4.jpg" data-lightbox="samples-gallery" data-title="Fantasy Portraits 4">
+          <picture>
+            <source type="image/avif" srcset="optimized/Fantasy/4.avif">
+            <source type="image/webp" srcset="optimized/Fantasy/4.webp">
+            <img src="images/Fantasy/4.jpg" alt="Fantasy Portraits 4" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Fantasy Portraits 4</div><div class="portfolio-medium">Art of Rose</div></div>
+      </div>
+
+      <!-- 5 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/Fantasy/5.jpg" data-lightbox="samples-gallery" data-title="Fantasy Portraits 5">
+          <picture>
+            <source type="image/avif" srcset="optimized/Fantasy/5.avif">
+            <source type="image/webp" srcset="optimized/Fantasy/5.webp">
+            <img src="images/Fantasy/5.jpg" alt="Fantasy Portraits 5" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Fantasy Portraits 5</div><div class="portfolio-medium">Art of Rose</div></div>
+      </div>
+
+      <!-- 6 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/Fantasy/6.jpg" data-lightbox="samples-gallery" data-title="Fantasy Portraits 6">
+          <picture>    
+            <source type="image/avif" srcset="optimized/Fantasy/6.avif">
+            <source type="image/webp" srcset="optimized/Fantasy/6.webp">
+            <img src="images/Fantasy/6.jpg" alt="Fantasy Portraits 6" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Fantasy Portraits 6</div><div class="portfolio-medium">Art of Rose</div></div>
+      </div>
+
+
+      <!-- 7 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/Fantasy/7.jpg" data-lightbox="samples-gallery" data-title="Fantasy Portraits 7">
+          <picture>
+            <source type="image/avif" srcset="optimized/Fantasy/7.avif">
+            <source type="image/webp" srcset="optimized/Fantasy/7.webp">
+            <img src="images/Fantasy/7.jpg" alt="Fantasy Portraits 7" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Fantasy Portraits 7</div><div class="portfolio-medium">Art of Rose</div></div>
+      </div>
+
+      <!-- 8 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/Fantasy/8.jpg" data-lightbox="samples-gallery" data-title="Fantasy Portraits 8">
+          <picture>
+            <source type="image/avif" srcset="optimized/Fantasy/8.avif">
+            <source type="image/webp" srcset="optimized/Fantasy/8.webp">
+            <img src="images/Fantasy/8.jpg" alt="Fantasy Portraits 8" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Fantasy Portraits 8</div><div class="portfolio-medium">Art of Rose</div></div>
+      </div>
+
+      <!-- 9 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/Fantasy/9.jpg" data-lightbox="samples-gallery" data-title="Fantasy Portraits 9">
+          <picture>
+            <source type="image/avif" srcset="optimized/Fantasy/9.avif">
+            <source type="image/webp" srcset="optimized/Fantasy/9.webp">
+            <img src="images/Fantasy/9.jpg" alt="Fantasy Portraits 9" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Fantasy Portraits 9</div><div class="portfolio-medium">Art of Rose</div></div>
+      </div>
+
+      <!-- 10 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/Fantasy/10.jpg" data-lightbox="samples-gallery" data-title="Fantasy Portraits 10">
+          <picture>
+            <source type="image/avif" srcset="optimized/Fantasy/10.avif">
+            <source type="image/webp" srcset="optimized/Fantasy/10.webp">
+            <img src="images/Fantasy/10.jpg" alt="Fantasy Portraits 10" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Fantasy Portraits 10</div><div class="portfolio-medium">Art of Rose</div></div>
+      </div>
+
+      <!-- 11 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/Fantasy/11.jpg" data-lightbox="samples-gallery" data-title="Fantasy Portraits 11">
+          <picture>
+            <source type="image/avif" srcset="optimized/Fantasy/11.avif">
+            <source type="image/webp" srcset="optimized/Fantasy/11.webp">
+            <img src="images/Fantasy/11.jpg" alt="Fantasy Portraits 11" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Fantasy Portraits 11</div><div class="portfolio-medium">Art of Rose</div></div>
+      </div>
+
+      <!-- 12 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/Fantasy/12.jpg" data-lightbox="samples-gallery" data-title="Fantasy Portraits 12">
+          <picture>
+            <source type="image/avif" srcset="optimized/Fantasy/12.avif">
+            <source type="image/webp" srcset="optimized/Fantasy/12.webp">
+            <img src="images/Fantasy/12.jpg" alt="Fantasy Portraits 12" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Fantasy Portraits 12</div><div class="portfolio-medium">Art of Rose</div></div>
+      </div>
+
+      <!-- 13 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/Fantasy/13.jpg" data-lightbox="samples-gallery" data-title="Fantasy Portraits 13">
+          <picture>
+            <source type="image/avif" srcset="optimized/Fantasy/13.avif">
+            <source type="image/webp" srcset="optimized/Fantasy/13.webp">
+            <img src="images/Fantasy/13.jpg" alt="Fantasy Portraits 13" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Fantasy Portraits 13</div><div class="portfolio-medium">Art of Rose</div></div>
+      </div>
+
+      <!-- 14 -->
+      <div class="swiper-slide portfolio-card testimonial-card">
+        <a href="images/Fantasy/14.jpg" data-lightbox="samples-gallery" data-title="Fantasy Portraits 14">
+          <picture>
+            <source type="image/avif" srcset="optimized/Fantasy/14.avif">
+            <source type="image/webp" srcset="optimized/Fantasy/14.webp">
+            <img src="images/Fantasy/14.jpg" alt="Fantasy Portraits 14" class="portfolio-thumb-img" loading="lazy" />
+          </picture>
+        </a>
+        <div class="portfolio-info"><div class="portfolio-title">Fantasy Portraits 14</div><div class="portfolio-medium">Art of Rose</div></div>
+      </div>
+     <!-- 15 -->
+      
+
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</div>
+
+</div>
+</div>
 </section>
+
+<style>
+  #portfolio .nav-tabs .nav-link { border: none; background: transparent; font-weight: 700; font-size: 1.05rem; color: #fff; }
+  #portfolio .nav-tabs .nav-link.active { color: #ffc300; border-bottom: 2px solid #ffc300; }
+  #portfolio .portfolio-thumb-img { width: 100%; height: 360px; object-fit: cover; border-radius: 12px; }
+  #portfolio .btn-order-now { color:#111; background:#ffc300; border: none; padding: 0.5rem 0.9rem; border-radius: 8px; font-weight: 600; }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const makeSwiper = (container) => new Swiper(container, {
+      slidesPerView: 1.15,
+      spaceBetween: 16,
+      loop: true,
+      navigation: {
+        nextEl: container.querySelector('.swiper-button-next'),
+        prevEl: container.querySelector('.swiper-button-prev')
+      },
+      breakpoints: {
+        576: { slidesPerView: 2 },
+        992: { slidesPerView: 3 }
+      }
+    });
+
+    const swiperEls = Array.from(document.querySelectorAll('#portfolio .portfolio-swiper'));
+    let swipers = new Map();
+
+    swiperEls.forEach(el => {
+      const pane = el.closest('.tab-pane');
+      if (pane && pane.classList.contains('show') && pane.classList.contains('active')) {
+        swipers.set(el, makeSwiper(el));
+      }
+    });
+
+    const tabs = document.querySelectorAll('#portfolioTabs button[data-bs-toggle="tab"]');
+    tabs.forEach(btn => {
+      btn.addEventListener('shown.bs.tab', () => {
+        swiperEls.forEach(el => {
+          const pane = el.closest('.tab-pane');
+          const isVisible = pane && pane.classList.contains('active');
+          if (isVisible && !swipers.has(el)) {
+            swipers.set(el, makeSwiper(el));
+          } else if (isVisible && swipers.has(el)) {
+            swipers.get(el).update();
+          }
+        });
+      });
+    });
+  });
+</script>
+<!-- ========================= END PORTFOLIO (Tabbed) ========================= -->
+
 
 
 
@@ -1324,73 +1474,100 @@ Art of Rose
         </main>
 
 <footer class="site-footer">
-  <div class="container">
-    <div class="row align-items-center">
+  <div class="container footer-grid">
+    <!-- Address / Contact -->
+    <section aria-labelledby="footer-address">
+      <h4 id="footer-address">
+        <i class="bi-geo-alt-fill me-2" aria-hidden="true"></i>
+        Malabon City, Philippines
+      </h4>
 
-      <!-- Address and Contact -->
-      <div class="col-lg-5 col-12 mb-3 mb-lg-0">
-        <h5 class="text-white mb-1">
-          <i class="bi-geo-alt-fill me-2"></i>
-          Malabon City, Philippines
-        </h5>
-        <a href="mailto:artofroseofficial@gmail.com" class="custom-link mt-2 d-block">
-          artofroseofficial@gmail.com
-        </a>
-        <a href="https://www.facebook.com/rvs821" target="_blank" class="custom-link mt-2 d-block">
-          Art of Rose Facebook Page
-        </a>
-        <a href="https://juldah.website" target="_blank" class="custom-link mt-2 d-block">
-          juldah.website
-        </a>
-      </div>
+      <ul class="list-unstyled">
+        <li>
+          <a href="mailto:artofroseofficial@gmail.com" class="custom-link">
+            artofroseofficial@gmail.com
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/rvs821"
+             target="_blank" rel="noopener"
+             class="custom-link">
+            Art of Rose Facebook Page
+          </a>
+        </li>
+        <li>
+          <a href="https://juldah.website"
+             target="_blank" rel="noopener"
+             class="custom-link">
+            juldah.website
+          </a>
+        </li>
+      </ul>
+    </section>
 
-      <!-- Copyright & Credits -->
-      <div class="col-lg-4 col-12 mb-3 mb-lg-0">
-        <p class="copyright-text mb-0">
-          &copy; <span id="year"></span> Art of Rose. All rights reserved.<br>
-          
-          <span>Powered by <b>Quantrix IT Solutions</b></span><br>
-          <span>Website designed &amp; developed by <b>Juldah</b> &mdash; <a href="https://juldah.website" target="_blank">juldah.website</a></span><br>
-          
-        </p>
-      </div>
+    <!-- Quick Links (optional, keep or remove) -->
+    <nav aria-labelledby="footer-links-1">
+      <h4 id="footer-links-1">Explore</h4>
+      <ul class="list-unstyled">
+        <li><a href="#about" class="custom-link">About</a></li>
+        <li><a href="#portfolio" class="custom-link">Portfolio</a></li>
+        <li><a href="#blogs" class="custom-link">Blogs</a></li>
+        <li><a href="#contact" class="custom-link">Contact</a></li>
+      </ul>
+    </nav>
 
-      <!-- Social Icons -->
-      <div class="col-lg-3 col-12 text-lg-end text-start">
-        <ul class="social-icon mb-0">
-          <li><a href="https://www.facebook.com/rvs821" target="_blank" class="social-icon-link bi-facebook"></a></li>
-          <li><a href="mailto:artofroseofficial@gmail.com" target="_blank" class="social-icon-link bi-envelope"></a></li>
-          <li><a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" class="social-icon-link bi-linkedin"></a></li>
-          <li><a href="https://wa.me/639473044455" target="_blank" class="social-icon-link bi-whatsapp"></a></li>
-        </ul>
-      </div>
+    <!-- Services (optional, keep or remove) -->
+    <nav aria-labelledby="footer-links-2">
+      <h4 id="footer-links-2">Services</h4>
+      <ul class="list-unstyled">
+        <li><a href="#shop" class="custom-link">Digital Portrait</a></li>
+        <li><a href="#shop" class="custom-link">Oil / Traditional</a></li>
+        <li><a href="#shop" class="custom-link">Fantasy / Concept</a></li>
+      </ul>
+    </nav>
 
-    </div>
+    <!-- Socials -->
+    <aside class="socials" aria-labelledby="footer-socials">
+      <h4 id="footer-socials" class="visually-hidden">Social</h4>
+      <a href="https://www.facebook.com/rvs821" class="social-icon-link bi-facebook"
+         target="_blank" rel="noopener" aria-label="Facebook"></a>
+      <a href="mailto:artofroseofficial@gmail.com" class="social-icon-link bi-envelope"
+         aria-label="Email"></a>
+      <a href="https://www.linkedin.com/in/your-linkedin-profile" class="social-icon-link bi-linkedin"
+         target="_blank" rel="noopener" aria-label="LinkedIn"></a>
+      <a href="https://wa.me/639473044455" class="social-icon-link bi-whatsapp"
+         target="_blank" rel="noopener" aria-label="WhatsApp"></a>
+    </aside>
+  </div>
+
+  <div class="container copyright">
+    <p class="mb-0">
+      &copy; <span id="year"></span> Art of Rose. All rights reserved.
+      <br>
+      Powered by <strong>Quantrix IT Solutions</strong>
+      &nbsp;&middot;&nbsp;
+      Website designed &amp; developed by <strong>Dang</strong> —
+      <a href="https://juldah.website" target="_blank" rel="noopener">juldah.website</a>
+    </p>
   </div>
 </footer>
 
-<!-- JAVASCRIPT FILES -->
+<script>
+  // year autoupdate
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/jquery.sticky.js"></script>
+<script src="/js/include-partials.js"></script>
 <script src="js/aos.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/magnific-popup-options.js"></script>
-<script src="js/scrollspy.min.js"></script>
 <script src="js/custom.js"></script>
 
 <!-- Swiper CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
-<!-- Lightbox2 CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"/>
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-<!-- Lightbox2 JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-<!-- Photoswipe CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.css">
-<!-- Photoswipe JS -->
-<script src="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.umd.min.js"></script>
 
 <!-- CUSTOM SCRIPTS -->
 <script>

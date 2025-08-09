@@ -9,6 +9,7 @@
       name="description"
       content="Discover how Art of Rose recreates cherished memories through digital art restoration. Commission your own masterpiece today!"
     />
+
     <!-- FONTS & CSS -->
     <link
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:wght@400;700&display=swap"
@@ -21,50 +22,8 @@
     <link href="../../css/blog.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg glass-navbar shadow-lg">
-      <div class="container">
-        <a class="navbar-brand" href="../../index.html">
-          <img
-            src="../../images/logo.png"
-            alt="Art of Rose Logo"
-            style="height: 80px; width: auto"
-          />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="../../index.html#hero">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../../index.html#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../../index.html#portfolio"
-                >Portfolio</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../../index.html#news">Blogs</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../../index.html#contact">Contact Us</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <!-- NAVBAR (fixed path) -->
+    <div data-include="../../partials/navbar.html"></div>
 
     <main>
       <section class="blog-section">
@@ -85,17 +44,20 @@
                     >July 23, 2025 &bull; Digital Art Commission</span
                   >
                 </div>
+
                 <img
                   src="../Blog1/recreate.jpg"
                   alt="Finished Digital Portrait Restoration"
                   class="blog-img-main"
                 />
+
                 <p class="blog-lead">
                   Every artist dreams of creating something meaningful, but not
                   all commissions are created equal. Some artworks test your
                   passion, patience, and skill—just like this portrait
                   restoration project I recently completed.
                 </p>
+
                 <h2 class="blog-section-title">
                   A Client’s Request Like No Other
                 </h2>
@@ -113,6 +75,7 @@
                   desire to make the client happy. It was both a test and an
                   honor.
                 </p>
+
                 <!-- Photo Comparison -->
                 <div class="row mb-4">
                   <div class="col-md-6 mb-3 mb-md-0">
@@ -141,6 +104,7 @@
                     </div>
                   </div>
                 </div>
+
                 <h2 class="blog-section-title">
                   The Creative Process: Imagination Meets Technique
                 </h2>
@@ -151,17 +115,20 @@
                   Each brushstroke became a balance of realism and heart,
                   carefully blending the past with the present.
                 </p>
+
                 <blockquote class="blog-quote">
                   “An imaginative mind is a must for every artist. It’s not just
                   about copying a photo—it’s about bringing memories and dreams
                   to life.”
                 </blockquote>
+
                 <p>
                   Through patience and dedication, I used
                   <b>digital painting</b> to restore the couple’s smiles and
                   capture the emotion they shared—even if the original moments
                   were never photographed together.
                 </p>
+
                 <h2 class="blog-section-title">
                   Why Commission a Portrait Restoration?
                 </h2>
@@ -171,10 +138,12 @@
                   <li>Create a unique, meaningful keepsake</li>
                   <li>Honor those you cherish, past or present</li>
                 </ul>
+
                 <p>
                   Whether it’s for a parent, grandparent, or a treasured friend,
                   a custom portrait makes the perfect gift or heirloom.
                 </p>
+
                 <h2 class="blog-section-title">
                   Client Satisfaction: The Ultimate Reward
                 </h2>
@@ -184,6 +153,7 @@
                   tears of joy and hearing words of gratitude is why I do what I
                   do.
                 </p>
+
                 <h3 class="blog-section-title">
                   Turn Your Memories Into Masterpieces
                 </h3>
@@ -193,6 +163,7 @@
                   together! I offer custom portrait restorations and original
                   artworks tailored to your story.
                 </p>
+
                 <div class="blog-cta-box">
                   <b>
                     Commissions are open —
@@ -202,6 +173,7 @@
                     for inquiries or a free quote!
                   </b>
                 </div>
+
                 <div class="blog-tags mb-4">
                   <span class="badge bg-dark text-warning me-1"
                     >#PortraitRestoration</span
@@ -220,6 +192,7 @@
                   >
                   <span class="badge bg-dark text-warning me-1">#ArtistPH</span>
                 </div>
+
                 <p class="blog-ending">
                   Are you ready to have your treasured memories restored?
                   <b>Let’s make your story a masterpiece!</b>
@@ -227,173 +200,98 @@
               </div>
             </div>
 
-            <!-- BLOG SIDEBAR (Active links to blog2, blog3, blog4) -->
+            <!-- SIDEBAR (auto-generated) -->
             <div class="col-lg-4 col-12">
-              <aside class="blog-sidebar">
+              <aside class="blog-sidebar" id="sidebarAuto">
                 <h5 class="sidebar-title">You might also like</h5>
-                <!-- Blog 3: Fish Series -->
-                <div class="sidebar-suggestion">
-                  <img
-                    src="../blog3/fs1.jpg"
-                    alt="Fish Series Art"
-                    class="sidebar-img"
-                  />
-                  <div>
-                    <div class="sidebar-link-title">
-                      <a
-                        href="../blog3/blog3.html"
-                        class="sidebar-link"
-                        style="text-decoration: none; color: #ffe49d"
-                      >
-                        Fish Series: Color, Memory, and Luck
-                      </a>
-                    </div>
-                    <div class="sidebar-link-desc">
-                      Why fish are my favorite art subject—plus fun facts about
-                      luck and ocean beauty!
-                    </div>
-                    <a href="../blog3/blog3.html" class="sidebar-link"
-                      >Read more &raquo;</a
-                    >
-                  </div>
-                </div>
-                <!-- Blog 2: Exhibit -->
-                <div class="sidebar-suggestion">
-                  <img
-                    src="../Blog2/gal.jpg"
-                    alt="Bayanihan of Art Exhibit"
-                    class="sidebar-img"
-                  />
-                  <div>
-                    <div class="sidebar-link-title">
-                      <a
-                        href="../Blog2/blog2.html"
-                        class="sidebar-link"
-                        style="text-decoration: none; color: #ffe49d"
-                      >
-                        Bayanihan of Art: Gallery Exhibit
-                      </a>
-                    </div>
-                    <div class="sidebar-link-desc">
-                      Highlights from our memorable gallery exhibit at
-                      Fishermall Malabon.
-                    </div>
-                    <a href="../Blog2/blog2.html" class="sidebar-link"
-                      >Read more &raquo;</a
-                    >
-                  </div>
-                </div>
-                <!-- Blog 4: Digital Painting -->
-                <div class="sidebar-suggestion">
-                  <img
-                    src="../blog4/negan1.png"
-                    alt="Negan Fan Art Digital Painting"
-                    class="sidebar-img"
-                  />
-                  <div>
-                    <div class="sidebar-link-title">
-                      <a
-                        href="../blog4/blog4.html"
-                        class="sidebar-link"
-                        style="text-decoration: none; color: #ffe49d"
-                      >
-                        From Sketchbook to Screen: Negan Fan Art
-                      </a>
-                    </div>
-                    <div class="sidebar-link-desc">
-                      My journey into digital painting, and how I painted Negan
-                      (Jeffrey Dean Morgan) from The Walking Dead!
-                    </div>
-                    <a href="../blog4/blog4.html" class="sidebar-link"
-                      >Read more &raquo;</a
-                    >
-                  </div>
-                </div>
+                <!-- auto items will be injected here -->
               </aside>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- FOOTER -->
-      <footer class="site-footer">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-5 col-12 mb-3 mb-lg-0">
-              <h5 class="text-white mb-1">
-                <i class="bi-geo-alt-fill me-2"></i>Malabon City, Philippines
-              </h5>
-              <a
-                href="mailto:artofroseofficial@gmail.com"
-                class="custom-link mt-2 d-block"
-                >artofroseofficial@gmail.com</a
-              >
-              <a
-                href="https://www.facebook.com/rvs821"
-                target="_blank"
-                class="custom-link mt-2 d-block"
-                >Art of Rose Facebook Page</a
-              >
-              <a
-                href="https://juldah.website"
-                target="_blank"
-                class="custom-link mt-2 d-block"
-                >juldah.website</a
-              >
+      <!-- FOOTER (fixed path) -->
+      <div data-include="../../partials/footer.html"></div>
+    </main>
+
+    <!-- JS (fixed paths) -->
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/include-partials.js" defer></script>
+
+    <!-- Auto Sidebar Script -->
+    <script>
+      // Identify current post (change per file)
+      const CURRENT_BLOG_ID = "blog1";
+
+      // Master list of posts (add here only once; reuse across all blog pages)
+      const BLOGS = [
+        {
+          id: "blog1",
+          title: "Turning Memories Into Masterpieces",
+          href: "../blog1/blog1.html",
+          img: "../Blog1/recreate.jpg",
+          desc: "See how we restore old photos and transform them into digital art!",
+        },
+        {
+          id: "blog2",
+          title: "Bayanihan of Art: Gallery Exhibit",
+          href: "../Blog2/blog2.html",
+          img: "../Blog2/gal.jpg",
+          desc: "Highlights from our memorable gallery exhibit at Fishermall Malabon.",
+        },
+        {
+          id: "blog3",
+          title: "Fish Series: Color, Memory, and Luck",
+          href: "../blog3/blog3.html",
+          img: "../blog3/fs1.jpg",
+          desc: "Why fish are my favorite art subject—plus fun facts about ocean beauty!",
+        },
+        {
+          id: "blog4",
+          title: "From Sketchbook to Screen: Negan Fan Art",
+          href: "../blog4/blog4.html",
+          img: "../blog4/negan1.png",
+          desc: "My journey into digital painting—how I painted Negan in Photoshop.",
+        },
+      ];
+
+      // Render 3 suggestions (exclude current). You can randomize or pick latest.
+      function renderSidebar() {
+        const box = document.getElementById("sidebarAuto");
+        if (!box) return;
+
+        const items = BLOGS.filter((b) => b.id !== CURRENT_BLOG_ID).slice(0, 3);
+        const html = items
+          .map(
+            (b) => `
+        <div class="sidebar-suggestion">
+          <img src="${b.img}" alt="${b.title}" class="sidebar-img" />
+          <div>
+            <div class="sidebar-link-title">
+              <a href="${b.href}" class="sidebar-link" style="text-decoration:none; color:#ffe49d">
+                ${b.title}
+              </a>
             </div>
-            <div class="col-lg-4 col-12 mb-3 mb-lg-0">
-              <p class="copyright-text mb-0">
-                &copy; <span id="year"></span> Art of Rose. All rights
-                reserved.
-                <br />
-                <span>Powered by <b>Quantrix IT Solutions</b></span
-                ><br />
-                <span
-                  >Website designed &amp; developed by <b>Juldah</b> &mdash;
-                  <a href="https://juldah.website" target="_blank"
-                    >juldah.website</a
-                  ></span
-                >
-              </p>
-            </div>
-            <div class="col-lg-3 col-12 text-lg-end text-start">
-              <ul class="social-icon mb-0">
-                <li>
-                  <a
-                    href="https://www.facebook.com/rvs821"
-                    target="_blank"
-                    class="social-icon-link bi-facebook"
-                  ></a>
-                </li>
-                <li>
-                  <a
-                    href="mailto:artofroseofficial@gmail.com"
-                    target="_blank"
-                    class="social-icon-link bi-envelope"
-                  ></a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.linkedin.com/in/your-linkedin-profile"
-                    target="_blank"
-                    class="social-icon-link bi-linkedin"
-                  ></a>
-                </li>
-                <li>
-                  <a
-                    href="https://wa.me/639473044455"
-                    target="_blank"
-                    class="social-icon-link bi-whatsapp"
-                  ></a>
-                </li>
-              </ul>
-            </div>
+            <div class="sidebar-link-desc">${b.desc}</div>
+            <a href="${b.href}" class="sidebar-link">Read more &raquo;</a>
           </div>
         </div>
-      </footer>
-      <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-      </script>
-    </main>
+      `
+          )
+          .join("");
+
+        // keep the heading, append items
+        const heading =
+          box.querySelector(".sidebar-title")?.outerHTML ||
+          "<h5 class='sidebar-title'>You might also like</h5>";
+        box.innerHTML = heading + html;
+      }
+
+      // Option: randomize order each load (comment out if ayaw mo)
+      // BLOGS.sort(() => Math.random() - 0.5);
+
+      renderSidebar();
+    </script>
   </body>
 </html>

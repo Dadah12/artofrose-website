@@ -1,82 +1,33 @@
 (function ($) {
   "use strict";
 
-  // AOS ANIMATIONS
-  AOS.init();
+  // ===== AOS (animations) =====
+  if (window.AOS) AOS.init();
 
-  // NAVBAR
-  $(".navbar-nav .nav-link").click(function () {
+  // ===== Navbar: auto-collapse on link click =====
+  $(".navbar-nav .nav-link").on("click", function () {
     $(".navbar-collapse").collapse("hide");
   });
 
-  // NEWS IMAGE RESIZE
-  function NewsImageResize() {
-    $(".navbar").scrollspy({ offset: -76 });
+  // ===== Smooth anchor scroll =====
+  $('a[href*="#"]').on("click", function (event) {
+    const samePath =
+      location.pathname.replace(/^\//, "") === this.pathname.replace(/^\//, "");
+    const sameHost = location.hostname === this.hostname;
 
-    var LargeImage = $(".large-news-image").height();
-
-    var MinusHeight = LargeImage - 6;
-
-    $(".news-two-column").css({ height: MinusHeight - LargeImage / 2 + "px" });
-  }
-
-  $(window).on("resize", NewsImageResize);
-  $(document).on("ready", NewsImageResize);
-
-  $('a[href*="#"]').click(function (event) {
-    if (
-      location.pathname.replace(/^\//, "") ==
-        this.pathname.replace(/^\//, "") &&
-      location.hostname == this.hostname
-    ) {
-      var target = $(this.hash);
+    if (samePath && sameHost) {
+      let target = $(this.hash);
       target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
       if (target.length) {
         event.preventDefault();
-        $("html, body").animate(
-          {
-            scrollTop: target.offset().top - 66,
-          },
-          1000
-        );
+        $("html, body").animate({ scrollTop: target.offset().top - 66 }, 1000);
       }
     }
   });
 
-  document
-    .querySelectorAll(".portfolio-swiper")
-    .forEach(function (swiperContainer) {
-      new Swiper(swiperContainer, {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        navigation: {
-          nextEl: swiperContainer.querySelector(".swiper-button-next"),
-          prevEl: swiperContainer.querySelector(".swiper-button-prev"),
-        },
-        breakpoints: {
-          0: { slidesPerView: 1 },
-          600: { slidesPerView: 1.2 },
-          768: { slidesPerView: 2.5 },
-          992: { slidesPerView: 3 },
-          1200: { slidesPerView: 4 },
-        },
-        grabCursor: true,
-      });
-    });
-
-  $(document).on("click", "#lightboxOverlay", function (e) {
-    var width = $(window).width();
-    var x = e.pageX;
-    if (x < width / 2) {
-      $(".lb-prev").click();
-    } else {
-      $(".lb-next").click();
-    }
-  });
-
-  // 1. Collect images for PhotoSwipe gallery per swiper
+  // ===== Helper: collect PhotoSwipe items per swiper container =====
   function getPswpItems(swiperContainer) {
-    let items = [];
+    const items = [];
     swiperContainer.querySelectorAll(".pswp-link").forEach(function (link) {
       items.push({
         src: link.getAttribute("href"),
@@ -88,66 +39,56 @@
     return items;
   }
 
-  // 2. Initialize Swiper and attach arrow events
-  document
-    .querySelectorAll(".portfolio-swiper")
-    .forEach(function (swiperContainer) {
-      const swiper = new Swiper(swiperContainer, {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        navigation: {
-          nextEl: swiperContainer.querySelector(".swiper-button-next"),
-          prevEl: swiperContainer.querySelector(".swiper-button-prev"),
-        },
-        breakpoints: {
-          0: { slidesPerView: 1 },
-          600: { slidesPerView: 1.2 },
-          768: { slidesPerView: 2.5 },
-          992: { slidesPerView: 3 },
-          1200: { slidesPerView: 4 },
-        },
-        grabCursor: true,
-      });
-
-      // Prepare PhotoSwipe items
-      const pswpItems = getPswpItems(swiperContainer);
-
-      // Prepare function to open PhotoSwipe
-      function openPhotoSwipe(index) {
-        const pswp = new PhotoSwipe({
-          dataSource: pswpItems,
-          index: index,
-          showHideAnimationType: "zoom",
-          pswpModule: PhotoSwipe,
-        });
-        pswp.init();
-      }
-
-      // When arrow is clicked, open PhotoSwipe at the current slide
-      swiperContainer
-        .querySelector(".swiper-button-next")
-        .addEventListener("click", function (e) {
-          setTimeout(function () {
-            // Give Swiper a moment to update index
-            openPhotoSwipe(swiper.activeIndex);
-          }, 120);
-        });
-      swiperContainer
-        .querySelector(".swiper-button-prev")
-        .addEventListener("click", function (e) {
-          setTimeout(function () {
-            openPhotoSwipe(swiper.activeIndex);
-          }, 120);
-        });
-
-      // Optionally, make image click open PhotoSwipe too
-      swiperContainer
-        .querySelectorAll(".pswp-link")
-        .forEach(function (link, idx) {
-          link.addEventListener("click", function (e) {
-            e.preventDefault();
-            openPhotoSwipe(idx);
-          });
-        });
+  // ===== One Swiper init per .portfolio-swiper + PhotoSwipe hookup =====
+  document.querySelectorAll(".portfolio-swiper").forEach(function (container) {
+    const swiper = new Swiper(container, {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: container.querySelector(".swiper-button-next"),
+        prevEl: container.querySelector(".swiper-button-prev"),
+      },
+      breakpoints: {
+        0: { slidesPerView: 1 },
+        600: { slidesPerView: 1.2 },
+        768: { slidesPerView: 2.5 },
+        992: { slidesPerView: 3 },
+        1200: { slidesPerView: 4 },
+      },
+      grabCursor: true,
     });
+
+    // PhotoSwipe integration (only if PS is loaded)
+    const pswpItems = getPswpItems(container);
+    function openPhotoSwipe(index) {
+      if (!window.PhotoSwipe) return;
+      const pswp = new PhotoSwipe({
+        dataSource: pswpItems,
+        index: index,
+        showHideAnimationType: "zoom",
+        pswpModule: PhotoSwipe,
+      });
+      pswp.init();
+    }
+
+    // Arrow click → open PS at current slide (delay to let Swiper update index)
+    const nextBtn = container.querySelector(".swiper-button-next");
+    const prevBtn = container.querySelector(".swiper-button-prev");
+    if (nextBtn)
+      nextBtn.addEventListener("click", () =>
+        setTimeout(() => openPhotoSwipe(swiper.activeIndex), 120)
+      );
+    if (prevBtn)
+      prevBtn.addEventListener("click", () =>
+        setTimeout(() => openPhotoSwipe(swiper.activeIndex), 120)
+      );
+
+    // Image click → open PS at that index
+    container.querySelectorAll(".pswp-link").forEach(function (link, idx) {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        openPhotoSwipe(idx);
+      });
+    });
+  });
 })(window.jQuery);

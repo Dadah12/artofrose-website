@@ -17,47 +17,10 @@
     />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg glass-navbar shadow-lg">
-      <div class="container">
-        <a class="navbar-brand" href="../index.html">
-          <img
-            src="../images/logo.png"
-            alt="Art of Rose Logo"
-            style="height: 80px; width: auto"
-          />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="../index.html#hero">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html#portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html#news">Blogs</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html#contact">Contact Us</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+  
+    <!-- NAVBAR -->
+  <div data-include="../partials/navbar.html"></div>
+
     <main>
       <section class="news section-padding" id="all-blogs">
         <div class="container">
@@ -228,88 +191,12 @@
         </div>
       </section>
    <!-- FOOTER -->
-      <footer class="site-footer">
-        <div class="container">
-          <div class="row align-items-center">
-            <!-- Address and Contact -->
-            <div class="col-lg-5 col-12 mb-3 mb-lg-0">
-              <h5 class="text-white mb-1">
-                <i class="bi-geo-alt-fill me-2"></i>
-                Malabon City, Philippines
-              </h5>
-              <a
-                href="mailto:artofroseofficial@gmail.com"
-                class="custom-link mt-2 d-block"
-                >artofroseofficial@gmail.com</a
-              >
-              <a
-                href="https://www.facebook.com/rvs821"
-                target="_blank"
-                class="custom-link mt-2 d-block"
-                >Art of Rose Facebook Page</a
-              >
-              <a
-                href="https://juldah.website"
-                target="_blank"
-                class="custom-link mt-2 d-block"
-                >juldah.website</a
-              >
-            </div>
-            <!-- Copyright & Credits -->
-            <div class="col-lg-4 col-12 mb-3 mb-lg-0">
-              <p class="copyright-text mb-0">
-                &copy; <span id="year"></span> Art of Rose. All rights
-                reserved.<br />
-                <span>Powered by <b>Quantrix IT Solutions</b></span
-                ><br />
-                <span
-                  >Website designed &amp; developed by <b>Juldah</b> &mdash;
-                  <a href="https://juldah.website" target="_blank"
-                    >juldah.website</a
-                  ></span
-                >
-              </p>
-            </div>
-            <!-- Social Icons -->
-            <div class="col-lg-3 col-12 text-lg-end text-start">
-              <ul class="social-icon mb-0">
-                <li>
-                  <a
-                    href="https://www.facebook.com/rvs821"
-                    target="_blank"
-                    class="social-icon-link bi-facebook"
-                  ></a>
-                </li>
-                <li>
-                  <a
-                    href="mailto:artofroseofficial@gmail.com"
-                    target="_blank"
-                    class="social-icon-link bi-envelope"
-                  ></a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.linkedin.com/in/your-linkedin-profile"
-                    target="_blank"
-                    class="social-icon-link bi-linkedin"
-                  ></a>
-                </li>
-                <li>
-                  <a
-                    href="https://wa.me/639473044455"
-                    target="_blank"
-                    class="social-icon-link bi-whatsapp"
-                  ></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
-      <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-      </script>
-    </main>
-  </body>
+       <div data-include="../partials/footer.html"></div>
+      <!-- JS (relative paths from /Blog/) -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/include-partials.js" defer></script>
+    <script src="../js/custom.js" defer></script>
+  </main>
+</body>
 </html>
 

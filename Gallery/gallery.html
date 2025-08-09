@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gallery • Masonry</title>
+    <base href="../" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+    <style>
+      :root {
+        --bg: #0f0f10;
+        --txt: #e8e8ea;
+        --gold: #ffd700;
+        --gap: 12px;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--txt);
+      }
+
+      /* Title (base) */
+      .section-title {
+        font-family: "Great Vibes", cursive;
+        font-weight: 400;
+        font-size: clamp(2.4rem, 4vw, 4rem);
+        line-height: 1.1;
+      }
+
+      /* Container ng hero (hiwalay lang, walang nesting) */
+      .gallery-hero {
+        padding: 64px 0 10px;
+        text-align: center;
+      }
+
+      /* Force cursive sa Gallery title */
+      header.gallery-hero h1.section-title {
+        font-family: "Great Vibes", cursive !important;
+        font-weight: 400 !important;
+        font-size: clamp(2.6rem, 5vw, 4.2rem) !important;
+        line-height: 1.05;
+      }
+
+      .gallery-desc {
+        margin: 6px auto 2px;
+        color: #cfcfd4;
+        max-width: 780px;
+        font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+        text-align: center;
+        opacity: 0.95;
+      }
+      .gallery-desc .count {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        white-space: nowrap; /* <- para hindi mag line break */
+        background: #1b1c20;
+        border: 1px solid #2a2d33;
+        color: var(--gold);
+        padding: 2px 10px;
+        border-radius: 999px;
+        font-weight: 700;
+        font-size: 0.9em;
+        margin-left: 8px;
+      }
+
+      .tabbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+        margin: 10px auto 0;
+      }
+      .tab-btn {
+        background: #1b1c20;
+        border: 1px solid #2a2d33;
+        color: var(--gold);
+        padding: 6px 12px;
+        border-radius: 999px;
+        font-weight: 700;
+      }
+      .tab-btn.active {
+        background: var(--gold);
+        color: #111;
+      }
+
+      /* Masonry = zero gaps */
+      #grid {
+        column-count: 4;
+        column-gap: var(--gap);
+      }
+      .item {
+        break-inside: avoid;
+        margin-bottom: var(--gap);
+        position: relative;
+        border-radius: 14px;
+        overflow: hidden;
+        border: 1px solid #2a2d33;
+        background: #141518;
+        cursor: pointer;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+        transition: transform 0.15s, box-shadow 0.2s;
+      }
+      .item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+      }
+      .item img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      @media (max-width: 1200px) {
+        #grid {
+          column-count: 3;
+        }
+      }
+      @media (max-width: 992px) {
+        #grid {
+          column-count: 2;
+          --gap: 10px;
+        }
+      }
+      @media (max-width: 576px) {
+        #grid {
+          column-count: 1;
+          --gap: 8px;
+        }
+      }
+
+      /* Lightbox */
+      .lightbox {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.92);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+      .lightbox.open {
+        display: flex;
+      }
+      .lb-inner {
+        max-width: min(1200px, 96vw);
+        width: 100%;
+        padding: 10px;
+      }
+      .lb-stage {
+        position: relative;
+        background: #000;
+        border-radius: 12px;
+        overflow: hidden;
+        height: min(70vh, 75vw);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .lb-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: transform 0.15s ease;
+      }
+      .lb-ctrl {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        display: flex;
+        gap: 8px;
+        z-index: 2;
+      }
+      .lb-btn {
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        color: #fff;
+        padding: 8px 12px;
+        border-radius: 10px;
+        font-weight: 700;
+      }
+      .lb-nav .lb-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .lb-prev {
+        left: 10px;
+      }
+      .lb-next {
+        right: 10px;
+      }
+      .lb-counter {
+        position: absolute;
+        left: 12px;
+        top: 12px;
+        color: #fff;
+        opacity: 0.8;
+        font-weight: 700;
+      }
+      .lb-thumbs {
+        margin-top: 10px;
+        display: flex;
+        gap: 8px;
+        overflow: auto;
+      }
+      .lb-thumb {
+        width: 86px;
+        height: 62px;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 2px solid transparent;
+        flex: 0 0 auto;
+        cursor: pointer;
+        background: #111;
+      }
+      .lb-thumb.active {
+        border-color: var(--gold);
+      }
+      .lb-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      @media (max-width: 576px) {
+        .lb-stage {
+          height: 58vh;
+        }
+        .lb-thumb {
+          width: 72px;
+          height: 52px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div data-include="partials/navbar.html"></div>
+
+    <header class="gallery-hero">
+      <h1 class="section-title">Gallery</h1>
+
+      <!-- NEW: dynamic description -->
+      <p id="galleryDesc" class="gallery-desc" aria-live="polite"></p>
+
+      <div class="tabbar" id="galleryTabs">
+        <button class="tab-btn active" data-filter="all">All</button>
+        <button class="tab-btn" data-filter="digital">Digital</button>
+        <button class="tab-btn" data-filter="traditional">Traditional</button>
+        <button class="tab-btn" data-filter="fantasy">Fantasy</button>
+      </div>
+    </header>
+
+    <main class="section-padding">
+      <div class="container">
+        <section id="grid" aria-live="polite"></section>
+      </div>
+    </main>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <div class="lb-inner">
+        <div class="lb-stage">
+          <div class="lb-counter" id="lbCounter">1 / 1</div>
+          <div class="lb-nav">
+            <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous">
+              ‹
+            </button>
+            <button class="lb-btn lb-next" id="lbNext" aria-label="Next">
+              ›
+            </button>
+          </div>
+          <div class="lb-ctrl">
+            <button class="lb-btn" id="lbClose" aria-label="Close">✕</button>
+          </div>
+          <img class="lb-img" id="lbImg" alt="Artwork" />
+        </div>
+        <div class="lb-thumbs" id="lbThumbs"></div>
+      </div>
+    </div>
+
+    <div data-include="partials/footer.html"></div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/include-partials.js" defer></script>
+    <script>
+      /* ===== DATA ===== */
+      const SETS = [
+        {
+          cat: "digital",
+          folder: "optimized/full/digital artworks",
+          count: 23,
+        },
+        { cat: "fantasy", folder: "optimized/full/fantasy", count: 14 },
+        { cat: "traditional", folder: "optimized/full/traditional", count: 37 },
+      ];
+
+      // Build flat image list with stable IDs
+      const IMAGES = [];
+      for (const s of SETS) {
+        for (let i = 1; i <= s.count; i++) {
+          const folderEnc = s.folder.replace(/ /g, "%20");
+          const id = IMAGES.length; // stable global id
+          IMAGES.push({
+            id,
+            cat: s.cat,
+            avif: `${folderEnc}/${i}.avif`,
+            webp: `${folderEnc}/${i}.webp`,
+            title: `${s.cat} #${i}`,
+          });
+        }
+      }
+
+      /* ===== Dynamic Gallery Description ===== */
+      const DESCRIPTIONS = {
+        all: "Handpicked artworks—mix of digital paintings, traditional portraits, and fantasy pieces.",
+        digital:
+          "Digital artworks painted on tablet—clean strokes, vivid colors, and fine details.",
+        traditional:
+          "Traditional-style portraits: charcoal/graphite looks and classic textures.",
+        fantasy:
+          "Fantasy scenes and characters—imaginative worlds with dramatic lighting.",
+      };
+
+      const grid = document.getElementById("grid");
+      const tabsWrap = document.getElementById("galleryTabs");
+      let currentFilter = "all";
+
+      const filteredList = (f) =>
+        f === "all" ? IMAGES : IMAGES.filter((x) => x.cat === f);
+
+      function setDesc(filter) {
+        const descEl = document.getElementById("galleryDesc");
+        const list = filteredList(filter);
+        const label = filter.charAt(0).toUpperCase() + filter.slice(1);
+        descEl.innerHTML =
+          `<strong>${label}</strong> — ${DESCRIPTIONS[filter] || ""}` +
+          ` <span class="count"><b>${list.length}</b> images</span>`;
+      }
+
+      /* ===== Masonry render ===== */
+      function makeItem(item) {
+        const a = document.createElement("a");
+        a.className = "item";
+        a.dataset.id = item.id; // use global id
+        a.dataset.cat = item.cat;
+        a.innerHTML = `
+      <picture>
+        <source type="image/avif" srcset="${item.avif}">
+        <source type="image/webp" srcset="${item.webp}">
+        <img loading="lazy" alt="${item.title}">
+      </picture>
+    `;
+        return a;
+      }
+
+      function render(filter = currentFilter) {
+        const list = filteredList(filter);
+        const frag = document.createDocumentFragment();
+        list.forEach((it) => frag.appendChild(makeItem(it)));
+        grid.innerHTML = "";
+        grid.appendChild(frag);
+      }
+
+      // Tab clicks (event delegation)
+      tabsWrap.addEventListener("click", (e) => {
+        const btn = e.target.closest(".tab-btn");
+        if (!btn) return;
+        tabsWrap
+          .querySelectorAll(".tab-btn")
+          .forEach((x) => x.classList.remove("active"));
+        btn.classList.add("active");
+        currentFilter = btn.dataset.filter;
+        render(currentFilter);
+        setDesc(currentFilter);
+      });
+
+      // Open lightbox when clicking any item (event delegation)
+      grid.addEventListener("click", (e) => {
+        const item = e.target.closest(".item");
+        if (!item) return;
+        e.preventDefault();
+        openLightbox(Number(item.dataset.id), currentFilter);
+      });
+
+      // Initial
+      render("all");
+      setDesc("all");
+
+      /* ===== LIGHTBOX ===== */
+      const lb = document.getElementById("lightbox");
+      const lbImg = document.getElementById("lbImg");
+      const lbThumbs = document.getElementById("lbThumbs");
+      const lbPrev = document.getElementById("lbPrev");
+      const lbNext = document.getElementById("lbNext");
+      const lbClose = document.getElementById("lbClose");
+      const lbCounter = document.getElementById("lbCounter");
+
+      let lbIndex = 0;
+      let lbList = IMAGES;
+
+      function buildThumbs() {
+        lbThumbs.innerHTML = "";
+        const frag = document.createDocumentFragment();
+        lbList.forEach((it, i) => {
+          const d = document.createElement("div");
+          d.className = "lb-thumb" + (i === lbIndex ? " active" : "");
+          d.innerHTML = `<img src="${it.webp}" alt="thumb ${i + 1}">`;
+          d.addEventListener("click", () => setMain(i));
+          frag.appendChild(d);
+        });
+        lbThumbs.appendChild(frag);
+      }
+
+      function setMain(i) {
+        lbIndex = i;
+        const it = lbList[lbIndex];
+        lbImg.src = it.webp;
+        lbImg.alt = it.title;
+        lbCounter.textContent = `${lbIndex + 1} / ${lbList.length}`;
+        [...lbThumbs.children].forEach((t, idx) =>
+          t.classList.toggle("active", idx === lbIndex)
+        );
+      }
+
+      function openLightbox(globalId, filter) {
+        lbList = filteredList(filter);
+        // map global id to index inside filtered list
+        lbIndex = lbList.findIndex((x) => x.id === globalId);
+        if (lbIndex < 0) lbIndex = 0;
+
+        buildThumbs();
+        setMain(lbIndex);
+        lb.classList.add("open");
+        lb.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeLightbox() {
+        lb.classList.remove("open");
+        lb.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+      }
+      const next = () => setMain((lbIndex + 1) % lbList.length);
+      const prev = () => setMain((lbIndex - 1 + lbList.length) % lbList.length);
+
+      lbNext.addEventListener("click", next);
+      lbPrev.addEventListener("click", prev);
+      lbClose.addEventListener("click", closeLightbox);
+      lb.addEventListener("click", (e) => {
+        if (e.target === lb) closeLightbox();
+      });
+      window.addEventListener("keydown", (e) => {
+        if (!lb.classList.contains("open")) return;
+        if (e.key === "Escape") closeLightbox();
+        if (e.key === "ArrowRight") next();
+        if (e.key === "ArrowLeft") prev();
+      });
+    </script>
+  </body>
+</html>
